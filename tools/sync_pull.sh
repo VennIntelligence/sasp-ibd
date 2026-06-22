@@ -13,4 +13,4 @@ SUB="${1:-results/}"
 rsync -avz --human-readable --mkpath \
   --exclude='__pycache__/' --exclude='*.pyc' \
   --exclude='.DS_Store' --exclude='.ipynb_checkpoints/' \
-  "tokyo:~/lzy/${SUB}" "./${SUB}"
+  "tokyo:~/mycode/sasp-ibd/${SUB}" "./${SUB}"
