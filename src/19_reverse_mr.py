@@ -152,7 +152,7 @@ def lookup_eqtl(rsids: set[str], genes: list[str]) -> pd.DataFrame:
         f"-v rsfile={shlex.quote(str(rsfile))} "
         "'BEGIN{while((getline line < rsfile)>0){want[line]=1}; close(rsfile)} "
         "NR==FNR{genes[$1]=1; next} FNR==1{next} "
-        "(($2 in want) && ($9 in genes)){print $9,$2,$1,$5,$6,$7,$13}' "
+        "(($2 in want) && ($9 in genes)){print $9,$2,$1,$7,$5,$6,$13}' "
         f"{shlex.quote(str(genefile))} -"
     )
     rows = []

@@ -23,3 +23,14 @@
 - eQTL Catalogue datasets selected from the live `quant_method=ge` listing and cached in `/home/ujs/mycode/sasp-ibd/outputs/causal_module/eqtl_catalogue_datasets_ge.tsv`.
 - Outputs: `/home/ujs/mycode/sasp-ibd/outputs/causal_module/module_causal_map_multicontext.tsv`, `/home/ujs/mycode/sasp-ibd/outputs/causal_module/Fig_module_causal_multicontext.png`, `/home/ujs/mycode/sasp-ibd/outputs/causal_module/SUMMARY.md`.
 - Gut allpairs: supplied nominal allpairs files were streamed by eGenes-inferred phenotype IDs, but no target IDs matched the local allpairs `gene_id` values; audit files were written and gut coloc remains significant-pairs restricted.
+
+
+## 2026-06-23 JST - causal hardening
+
+- Ran `src/27_causal_hardening.py` on CPU only with `n_jobs=30` for parallel-safe steps.
+- Downloaded/resumed CRP, FinnGen R12 endpoints, and eQTLGen full cis/allele-frequency inputs; eQTLGen HTTPS certificate is expired, so `src/27` scopes `curl --insecure` only to that host.
+- Wrote hardening outputs under `/home/ujs/mycode/sasp-ibd/outputs/causal_hardening` and promoted final table/figure copies into `results/`.
+- Reverse-MR is not a clean pass: significant one-SNP reverse rows appear for CD->CCL8, IBD->CCL8, and IBD->CXCR2, so reverse causality/disease-linked expression remains a caveat.
+- Steiger supports exposure->outcome for the blood CCL8/CXCR2 lead instruments. CXCR2 FinnGen R12 replicates for IBD and UC but not CD. CXCR2 MVMR-CRP keeps the protective direction, but CRP conditional F is weak; CCL8 MVMR is not estimable with one instrument.
+- deCODE CCL8 pQTL coloc is best-effort blocked because the public deCODE proteomics folder requires an interactive/token workflow and no local CCL8 pQTL file is present.
+- OSM/OSMR/TREM1/IL13RA2 are formalised as bystanders in `bystander_triage.tsv`.

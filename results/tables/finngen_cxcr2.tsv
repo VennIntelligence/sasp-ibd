@@ -1,0 +1,4 @@
+outcome	phenocode	gene	method	rsid	theta	se	OR	p	PP4	nsnp	endpoint_url	status
+IBD	K11_IBD_STRICT	CXCR2	wald	rs4674259	-0.22773433462160514	0.05223891034048814	0.7963357905851465	1.3037358093341698e-05		1	https://storage.googleapis.com/finngen-public-data-r12/summary_stats/release/finngen_R12_K11_IBD_STRICT.gz	ok
+CD	K11_CD_STRICT2	CXCR2	wald	rs4674259	-0.03204933573863229	0.10873094298425096	0.968458801270261	0.7681786091302846		1	https://storage.googleapis.com/finngen-public-data-r12/summary_stats/release/finngen_R12_K11_CD_STRICT2.gz	ok
+UC	K11_UC_STRICT2	CXCR2	wald	rs4674259	-0.30693075751747884	0.0639807983653707	0.7357015409447153	1.6087293201141966e-06		1	https://storage.googleapis.com/finngen-public-data-r12/summary_stats/release/finngen_R12_K11_UC_STRICT2.gz	ok

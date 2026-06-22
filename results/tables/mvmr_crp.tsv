@@ -1,0 +1,13 @@
+gene	outcome	adjusted_exposure	nsnp	theta	se	p	OR	q	q_p	conditional_F_approx	status
+CCL8	CD	CRP	1								need >=3 harmonised instruments for two-exposure MVMR
+CCL8	CD	gene_expression	1								need >=3 harmonised instruments for two-exposure MVMR
+CXCR2	CD	CRP	5	5.753017996999841	3.219558893346825	0.0739542444772882	315.14031906867825	1.8796641534079503	0.597754401707606	2.0863935074755955	weak conditional F for at least one exposure
+CXCR2	CD	gene_expression	5	-0.221895690200932	0.0582802633908833	0.0001404411919788	0.8009989120127283	1.8796641534079503	0.597754401707606	346.49786881457254	weak conditional F for at least one exposure
+CCL8	IBD	CRP	1								need >=3 harmonised instruments for two-exposure MVMR
+CCL8	IBD	gene_expression	1								need >=3 harmonised instruments for two-exposure MVMR
+CXCR2	IBD	CRP	5	3.704974934123576	2.491640154594039	0.1370247726480545	40.64902840058616	0.9987883708921724	0.801545135638382	2.0863935074755955	weak conditional F for at least one exposure
+CXCR2	IBD	gene_expression	5	-0.2896280706803411	0.0449030743015212	1.1179688771486119e-10	0.7485419204987775	0.9987883708921724	0.801545135638382	346.49786881457254	weak conditional F for at least one exposure
+CCL8	UC	CRP	1								need >=3 harmonised instruments for two-exposure MVMR
+CCL8	UC	gene_expression	1								need >=3 harmonised instruments for two-exposure MVMR
+CXCR2	UC	CRP	5	2.76844021765658	3.391663646171789	0.4143580473937128	15.933761417198586	3.443414625068496	0.3281755490772857	2.0863935074755955	weak conditional F for at least one exposure
+CXCR2	UC	gene_expression	5	-0.305209001563821	0.0613104882445506	6.421548385966784e-07	0.7369693305519133	3.443414625068496	0.3281755490772857	346.49786881457254	weak conditional F for at least one exposure

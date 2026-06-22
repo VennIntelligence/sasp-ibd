@@ -1,0 +1,5 @@
+gene	best_context	best_eqtl_p	MR_OR	MR_p	MR_FDR	coloc_PP4	bystander_call	status
+OSM							True	no usable instrument in tested contexts; no causal evidence
+OSMR							True	no usable instrument in tested contexts; no causal evidence
+TREM1	neutrophil	2.43909e-27	1.0017189580519708	0.9176071990405236	0.9176071990405236	0.0001206852563789	True	strong/usable eQTL but MR+coloc does not support causality
+IL13RA2							True	no usable instrument in tested contexts; no causal evidence

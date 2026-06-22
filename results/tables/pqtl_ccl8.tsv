@@ -1,0 +1,2 @@
+gene	protein	source	method	nsnp	PP4	status	source_page
+CCL8	MCP-2/CCL8	deCODE Ferkingstad 2021 plasma pQTL	best_effort_coloc	0		blocked: deCODE Ferkingstad proteomics folder requires interactive/token workflow; no local CCL8/MCP-2 pQTL file found	https://www.decode.com/summarydata/

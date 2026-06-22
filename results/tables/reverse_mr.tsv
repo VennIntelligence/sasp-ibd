@@ -1,0 +1,7 @@
+exposure	gene	nsnp	theta_expr_per_logodds_disease	se	p_mr	q	q_p	mean_F	status	fdr
+CD	CCL8	1	0.2813611449453388	0.0572710358543679	8.978485193773279e-07	0.0		75.26992512981523	ok	8.978485193773279e-07
+CD	CXCR2	0							no overlapping cis-eQTL outcome after allele harmonisation	
+IBD	CXCR2	1	-3.3208289509756934	0.1099991040283969	3.2435274824095986e-200	4.185939695884784e-29		38.93759999999999	ok	9.730582447228795e-200
+IBD	CCL8	1	0.4393452646374802	0.0889236878655818	7.784259990912275e-07	5.969016997500253e-31		52.04591836734694	ok	8.978485193773279e-07
+UC	CCL8	0							no overlapping cis-eQTL outcome after allele harmonisation	
+UC	CXCR2	0							no overlapping cis-eQTL outcome after allele harmonisation	
