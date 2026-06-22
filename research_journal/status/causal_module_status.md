@@ -14,3 +14,12 @@
 - TNFRSF1A had a GTEx colon instrument but no harmonised de Lange GWAS allele row at the lead variant.
 - CCL8 and CXCR2 remain blood-only causal anchors in the old eQTLGen results because GTEx colon significant-pairs yielded no gut instrument for them.
 - Final strict gut causal calls under MR FDR<0.05 + coloc PP4>0.8: none.
+
+
+## 2026-06-23 JST - multicontext immune eQTL run
+
+- Pulled latest repo before work (`git pull --ff-only`, fast-forwarded to origin/main).
+- Ran `src/26_immune_eqtl_multicontext.py` on CPU only.
+- eQTL Catalogue datasets selected from the live `quant_method=ge` listing and cached in `/home/ujs/mycode/sasp-ibd/outputs/causal_module/eqtl_catalogue_datasets_ge.tsv`.
+- Outputs: `/home/ujs/mycode/sasp-ibd/outputs/causal_module/module_causal_map_multicontext.tsv`, `/home/ujs/mycode/sasp-ibd/outputs/causal_module/Fig_module_causal_multicontext.png`, `/home/ujs/mycode/sasp-ibd/outputs/causal_module/SUMMARY.md`.
+- Gut allpairs: supplied nominal allpairs files were streamed by eGenes-inferred phenotype IDs, but no target IDs matched the local allpairs `gene_id` values; audit files were written and gut coloc remains significant-pairs restricted.

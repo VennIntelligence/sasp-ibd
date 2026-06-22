@@ -1,0 +1,229 @@
+gene	context	variant_id	rsid	chrom	pos	ref	alt	MR_OR	MR_p	MR_FDR	p_eqtl	IBD_gwas_p	CD_MR_OR	CD_MR_p	CD_MR_FDR	UC_MR_OR	UC_MR_p	UC_MR_FDR	n_instrument	analysis_status	coloc_PP4	coloc_nsnps	coloc_method	PP3	causal_call
+ADGRE2	blood																		0	no_blood_result			existing_eqtlgen		False
+ADGRE2	gut_sigmoid	chr19_14641074_G_T_b38	chr19_14641074_G_T_b38	19	14641074.0	G	T	0.9570372232687321	0.4280510533986872	0.7393609104159142	1.41235e-05	0.4274	0.979408029391473	0.7666792852020369	0.8597012227883054	0.9209881382065539	0.2512015121214881	0.5024030242429762	1	tested		1.0	full_cis_region_api_or_gtex_sigpairs		False
+ADGRE2	gut_transverse																		0	no_tool					False
+ADGRE2	monocyte	chr19_14768222_G_A	rs9305048	19	14768222.0	G	A	0.9934162465359819	0.6834995855785135	0.8378382016768876	1.41126e-21	0.6814	0.9929211222019622	0.7328646763993503	0.8597012227883054	0.9862610464939661	0.5037030105724796	0.6916010463528669	1	tested	0.0026946455706134765	6017.0	full_cis_region_api_or_gtex_sigpairs	0.6123041554972033	False
+ADGRE2	neutrophil	chr19_14776064_C_A	rs1108016	19	14776064.0	C	A	0.9899318649881395	0.506540826490496	0.7699420562655539	8.124380000000001e-24	0.5059	0.9920255960982514	0.6824729474994817	0.8597012227883054	0.9868544183074056	0.4989540710459509	0.6916010463528669	1	tested	0.0032505077135527665	6029.0	full_cis_region_api_or_gtex_sigpairs	0.6120966055873858	False
+ADGRE2	monocyte_stim																		0	no_tool					False
+AQP9	blood																		0	no_blood_result			existing_eqtlgen		False
+AQP9	gut_sigmoid																		0	no_tool					False
+AQP9	gut_transverse																		0	no_tool					False
+AQP9	monocyte																		0	no_tool					False
+AQP9	neutrophil																		0	no_tool					False
+AQP9	monocyte_stim																		0	no_tool					False
+BCL2A1	blood																		0	no_blood_result			existing_eqtlgen		False
+BCL2A1	gut_sigmoid																		0	no_tool					False
+BCL2A1	gut_transverse																		0	no_tool					False
+BCL2A1	monocyte																		0	no_tool					False
+BCL2A1	neutrophil																		0	no_tool					False
+BCL2A1	monocyte_stim																		0	no_tool					False
+C5AR1	blood																		0	no_blood_result			existing_eqtlgen		False
+C5AR1	gut_sigmoid	chr19_47251208_G_A_b38	chr19_47251208_G_A_b38	19	47251208.0	G	A	1.0373668008121426	0.4773778179216349	0.7558482117092553	1.66364e-08	0.478	0.9616244535474316	0.5550807488553304	0.75332387344652	1.107277598998291	0.12277986172745176	0.3888028954702639	1	tested	0.009650165313582865	48.0	full_cis_region_api_or_gtex_sigpairs	0.0004967868262796981	False
+C5AR1	gut_transverse																		0	no_tool					False
+C5AR1	monocyte																		0	no_tool					False
+C5AR1	neutrophil																		0	no_tool					False
+C5AR1	monocyte_stim																		0	no_tool					False
+CCL2	blood							1.615	0.0320274549326789	0.1413440916427286									1	tested_existing_eqtlgen	0.021	6643.0	existing_eqtlgen		False
+CCL2	gut_sigmoid																		0	no_tool					False
+CCL2	gut_transverse																		0	no_tool					False
+CCL2	monocyte																		0	no_tool					False
+CCL2	neutrophil																		0	no_tool					False
+CCL2	monocyte_stim																		0	no_tool					False
+CCL8	blood							2.349	0.0023336386142975	0.0299483622168182									1	tested_existing_eqtlgen	0.955	6651.0	existing_eqtlgen		True
+CCL8	gut_sigmoid																		0	no_tool					False
+CCL8	gut_transverse																		0	no_tool					False
+CCL8	monocyte																		0	no_tool					False
+CCL8	neutrophil																		0	no_tool					False
+CCL8	monocyte_stim																		0	no_tool					False
+CSF3R	blood																		0	no_blood_result			existing_eqtlgen		False
+CSF3R	gut_sigmoid																		0	no_tool					False
+CSF3R	gut_transverse																		0	no_tool					False
+CSF3R	monocyte																		0	no_tool					False
+CSF3R	neutrophil																		0	no_tool					False
+CSF3R	monocyte_stim																		0	no_tool					False
+CXCL10	blood							0.851	0.0167568423771355	0.0992520663876488									1	tested_existing_eqtlgen	0.047	6789.0	existing_eqtlgen		False
+CXCL10	gut_sigmoid																		0	no_tool					False
+CXCL10	gut_transverse																		0	no_tool					False
+CXCL10	monocyte																		0	no_tool					False
+CXCL10	neutrophil																		0	no_tool					False
+CXCL10	monocyte_stim																		0	no_tool					False
+CXCR2	blood							0.753	1.616843010154017e-09	1.2449691178185932e-07									1	tested_existing_eqtlgen	0.951	5060.0	existing_eqtlgen		True
+CXCR2	gut_sigmoid																		0	no_tool					False
+CXCR2	gut_transverse																		0	no_tool					False
+CXCR2	monocyte																		0	no_tool					False
+CXCR2	neutrophil	chr2_218080951_T_C	rs6737563	2	218080951.0	T	C	0.8510620998248944	2.773960265704668e-09	1.054104900967774e-07	2.198e-07	3.086e-09	0.8873646593403252	0.0007139993623643089	0.016837630541752264	0.8390534197507022	4.146377395306156e-07	7.878117051081697e-06	1	tested	0.9348759295693807	4261.0	full_cis_region_api_or_gtex_sigpairs	0.06431859861215235	True
+CXCR2	monocyte_stim																		0	no_tool					False
+FAP	blood																		0	no_blood_result			existing_eqtlgen		False
+FAP	gut_sigmoid																		0	no_tool					False
+FAP	gut_transverse																		0	no_tool					False
+FAP	monocyte																		0	no_tool					False
+FAP	neutrophil																		0	no_tool					False
+FAP	monocyte_stim																		0	no_tool					False
+FCGR2A	blood																		0	no_blood_result			existing_eqtlgen		False
+FCGR2A	gut_sigmoid																		0	no_tool					False
+FCGR2A	gut_transverse	chr1_161499981_T_A_b38	chr1_161499981_T_A_b38	1	161499981.0	T	A	1.153299961542217	0.07292559238062789	0.2655003737611747	2.29299e-06	0.07295	1.0905070720293892	0.39136593830755195	0.5868916302273602	1.1731984796874984	0.11964222482831428	0.3888028954702639	1	tested	0.03552883640002971	5.0	full_cis_region_api_or_gtex_sigpairs	0.000141464557603209	False
+FCGR2A	monocyte																		0	no_tool					False
+FCGR2A	neutrophil																		0	no_tool					False
+FCGR2A	monocyte_stim	chr1_161544752_A_C	rs396991	1	161544752.0	A	C	0.8823087995179189	0.00026566418871562563	0.0025238097927984438	1.4581e-07	0.0002725	0.9587554530515667	0.3378947004248102	0.5868916302273602	0.8231864375759993	9.55158384567921e-06	9.074004653395333e-05	1	tested	0.006682065901424835	5498.0	full_cis_region_api_or_gtex_sigpairs	0.8649329007995974	False
+FCGR3B	blood																		0	no_blood_result			existing_eqtlgen		False
+FCGR3B	gut_sigmoid																		0	no_tool					False
+FCGR3B	gut_transverse	chr1_162354477_G_A_b38	chr1_162354477_G_A_b38	1	162354477.0	G	A	0.8769231897000973	0.012145996385902679	0.057693482833037726	3.09615e-05	0.012	0.8625775900239697	0.02833184502459402	0.21532202218691457	0.8874727120670238	0.07127233958334737	0.3385436130209	1	tested		1.0	full_cis_region_api_or_gtex_sigpairs		False
+FCGR3B	monocyte	chr1_161530340_A_G	rs2099684	1	161530340.0	A	G	1.0678828958784814	2.1377051549868804e-05	0.0004061639794475073	3.54852e-20	2.175e-05	1.0255467032673107	0.20459395998332164	0.48591065496038893	1.1080567510522235	2.4694984247303284e-07	7.878117051081697e-06	1	tested	1.2358286511332413e-12	5451.0	full_cis_region_api_or_gtex_sigpairs	0.9999999999987352	False
+FCGR3B	neutrophil																		0	no_tool					False
+FCGR3B	monocyte_stim	chr1_161544752_A_C	rs396991	1	161544752.0	A	C	1.0590380283578738	0.000265664188715625	0.0025238097927984438	1.07719e-24	0.0002725	1.01948245317101	0.3378947004248102	0.5868916302273602	1.0932282008217613	9.551583845679297e-06	9.074004653395333e-05	1	tested	1.6002339185146603e-13	5367.0	full_cis_region_api_or_gtex_sigpairs	0.9999999999998153	False
+FFAR2	blood																		0	no_blood_result			existing_eqtlgen		False
+FFAR2	gut_sigmoid																		0	no_tool					False
+FFAR2	gut_transverse																		0	no_tool					False
+FFAR2	monocyte																		0	no_tool					False
+FFAR2	neutrophil																		0	no_tool					False
+FFAR2	monocyte_stim																		0	no_tool					False
+FPR1	blood																		0	no_blood_result			existing_eqtlgen		False
+FPR1	gut_sigmoid	chr19_51751943_A_G_b38	chr19_51751943_A_G_b38	19	51751943.0	A	G	0.9818599124446378	0.7653158812098244	0.8553530437050979	9.87285e-09	0.765	0.8980302840032782	0.17683170572890106	0.48591065496038893	1.0574234485865166	0.4677220096006711	0.6916010463528669	1	tested	0.007432177553652584	15.0	full_cis_region_api_or_gtex_sigpairs	0.00011073839533250596	False
+FPR1	gut_transverse	chr19_51749765_A_G_b38	chr19_51749765_A_G_b38	19	51749765.0	A	G	0.9871540577402749	0.8183795809199454	0.8638451131932758	2.60177e-10	0.8156	0.9089101886732183	0.19321178272021933	0.48591065496038893	1.0605703682018388	0.4068714465828308	0.6916010463528669	1	tested	0.007037100726330773	12.0	full_cis_region_api_or_gtex_sigpairs	8.269248652540605e-05	False
+FPR1	monocyte	chr19_51755312_C_T	rs4802862	19	51755312.0	C	T	0.9933504285219461	0.619685378996237	0.8103167240929434	5.48844e-41	0.6184	0.9749270908974522	0.14737566801768742	0.48591065496038893	1.010611255104936	0.5329366807611369	0.6983308230663172	1	tested	0.005779001465970499	7687.0	full_cis_region_api_or_gtex_sigpairs	0.21890157392069295	False
+FPR1	neutrophil	chr19_51765449_G_A	rs11084116	19	51765449.0	G	A	0.9687587901244075	0.15376543763005035	0.4494682023032241	1.06928e-14	0.1536	0.9915832210510187	0.7692063572316417	0.8597012227883054	0.9551523165817696	0.10270016626198089	0.3888028954702639	1	tested	0.014274381128672497	7728.0	full_cis_region_api_or_gtex_sigpairs	0.2182713757083899	False
+FPR1	monocyte_stim	chr19_51753248_A_G	rs4801892	19	51753248.0	A	G	0.9928020877447128	0.7146101092913739	0.8485995047835065	2.26416e-11	0.7174	0.9638140973874428	0.1531274510196695	0.48591065496038893	1.0175486314782793	0.48503658676635475	0.6916010463528669	1	tested	0.0057466766532257825	8035.0	full_cis_region_api_or_gtex_sigpairs	0.22492827362590076	False
+FPR2	blood																		0	no_blood_result			existing_eqtlgen		False
+FPR2	gut_sigmoid																		0	no_tool					False
+FPR2	gut_transverse																		0	no_tool					False
+FPR2	monocyte																		0	no_tool					False
+FPR2	neutrophil	chr19_51765449_G_A	rs11084116	19	51765449.0	G	A	0.981665826523994	0.15376543763005035	0.4494682023032241	8.34844e-43	0.1536	0.9950843387631583	0.7692063572316417	0.8597012227883054	0.9736038127996238	0.10270016626198085	0.3888028954702639	1	tested	0.014095466333716824	7691.0	full_cis_region_api_or_gtex_sigpairs	0.1891620675525111	False
+FPR2	monocyte_stim	chr19_51778065_A_G	rs34342855	19	51778065.0	A	G	1.0084583976573438	0.8031113335059012	0.8638451131932758	1.01987e-15	0.8038	0.9977138059570367	0.9579369835749778	0.9579369835749778	1.0209998653277839	0.6320076696684098	0.7459767395505152	1	tested	0.014379794791308761	8002.0	full_cis_region_api_or_gtex_sigpairs	0.20889055969773032	False
+G0S2	blood																		0	no_blood_result			existing_eqtlgen		False
+G0S2	gut_sigmoid																		0	no_tool					False
+G0S2	gut_transverse	chr1_209696111_C_T_b38	chr1_209696111_C_T_b38	1	209696111.0	C	T	0.9741292296616733	0.6397237295470606	0.8103167240929434	4.91793e-06	0.6384	0.9840444504055015	0.8241408957418851	0.8699265010608788	0.9747097025000685	0.7178419032723767	0.7793712092671519	1	tested	0.005848118763825211	10.0	full_cis_region_api_or_gtex_sigpairs	8.135969035708701e-05	False
+G0S2	monocyte	chr1_209668934_A_G	rs10779511	1	209668934.0	A	G	0.9681488399509278	0.35514407531456726	0.7102881506291345	2.85107e-08	0.3538	0.96051855987933	0.37406279749088245	0.5868916302273602	0.9711713237320577	0.5096007709968493	0.6916010463528669	1	tested	0.002783956023268243	5409.0	full_cis_region_api_or_gtex_sigpairs	0.9851831346561717	False
+G0S2	neutrophil																		0	no_tool					False
+G0S2	monocyte_stim	chr1_209660101_T_C	rs7542165	1	209660101.0	T	C	0.9777353871315443	0.4620656414240021	0.7558482117092553	1.20674e-12	0.4637	0.9676513936586398	0.40155743120819387	0.5868916302273602	0.9821801146912693	0.6478219053991316	0.7459767395505152	1	tested	1.5484872716133636e-05	5455.0	full_cis_region_api_or_gtex_sigpairs	0.9987549540995987	False
+IL11	blood																		0	no_blood_result			existing_eqtlgen		False
+IL11	gut_sigmoid																		0	no_tool					False
+IL11	gut_transverse	chr19_55574821_C_T_b38	chr19_55574821_C_T_b38	19	55574821.0	C	T	0.8765155305739079	0.19317248403645326	0.4587846495865765	4.942e-06	0.1932	0.8915971857372902	0.38045992598297884	0.5868916302273602	0.8589213589840692	0.23656687308251434	0.5018381852305175	1	tested	0.0002853531202791068	2.0	full_cis_region_api_or_gtex_sigpairs	2.3066518543436534e-07	False
+IL11	monocyte																		0	no_tool					False
+IL11	neutrophil																		0	no_tool					False
+IL11	monocyte_stim																		0	no_tool					False
+IL13RA2	blood																		0	no_blood_result			existing_eqtlgen		False
+IL13RA2	gut_sigmoid																		0	no_tool					False
+IL13RA2	gut_transverse																		0	no_tool					False
+IL13RA2	monocyte																		0	no_tool					False
+IL13RA2	neutrophil																		0	no_tool					False
+IL13RA2	monocyte_stim																		0	no_tool					False
+IL1B	blood							0.585	0.0051102606608558	0.0437211189873223									1	tested_existing_eqtlgen	0.071	5244.0	existing_eqtlgen		False
+IL1B	gut_sigmoid																		0	no_tool					False
+IL1B	gut_transverse																		0	no_tool					False
+IL1B	monocyte																		0	no_tool					False
+IL1B	neutrophil																		0	no_tool					False
+IL1B	monocyte_stim																		0	no_tool					False
+IL24	blood																		0	no_blood_result			existing_eqtlgen		False
+IL24	gut_sigmoid																		0	no_tool					False
+IL24	gut_transverse																		0	no_tool					False
+IL24	monocyte																		0	no_tool					False
+IL24	neutrophil																		0	no_tool					False
+IL24	monocyte_stim																		0	no_tool					False
+MMP1	blood							1.029	0.8146938652942451	0.8961632518236697									1	tested_existing_eqtlgen			existing_eqtlgen		False
+MMP1	gut_sigmoid																		0	no_tool					False
+MMP1	gut_transverse																		0	no_tool					False
+MMP1	monocyte																		0	no_tool					False
+MMP1	neutrophil																		0	no_tool					False
+MMP1	monocyte_stim	chr11_102802517_A_T	rs484915	11	102802517.0	A	T	0.9979177880550617	0.8881661973480531	0.9121706891682707	1.50584e-22	0.8874	1.0183467201179124	0.33840724041864645	0.5868916302273602	0.9819838177356842	0.3354520902281727	0.6373589714335282	1	tested	0.0053708582155608245	6580.0	full_cis_region_api_or_gtex_sigpairs	0.1657662019679886	False
+MMP3	blood																		0	no_blood_result			existing_eqtlgen		False
+MMP3	gut_sigmoid																		0	no_tool					False
+MMP3	gut_transverse																		0	no_tool					False
+MMP3	monocyte																		0	no_tool					False
+MMP3	neutrophil																		0	no_tool					False
+MMP3	monocyte_stim																		0	no_tool					False
+MNDA	blood																		0	no_blood_result			existing_eqtlgen		False
+MNDA	gut_sigmoid																		0	no_tool					False
+MNDA	gut_transverse																		0	no_tool					False
+MNDA	monocyte																		0	no_tool					False
+MNDA	neutrophil																		0	no_tool					False
+MNDA	monocyte_stim																		0	no_tool					False
+OSM	blood																		0	no_blood_result			existing_eqtlgen		False
+OSM	gut_sigmoid																		0	no_tool					False
+OSM	gut_transverse																		0	no_tool					False
+OSM	monocyte																		0	no_tool					False
+OSM	neutrophil																		0	no_tool					False
+OSM	monocyte_stim																		0	no_tool					False
+OSMR	blood																		0	no_blood_result			existing_eqtlgen		False
+OSMR	gut_sigmoid																		0	no_tool					False
+OSMR	gut_transverse																		0	no_tool					False
+OSMR	monocyte																		0	no_tool					False
+OSMR	neutrophil																		0	no_tool					False
+OSMR	monocyte_stim																		0	no_tool					False
+PROK2	blood																		0	no_blood_result			existing_eqtlgen		False
+PROK2	gut_sigmoid																		0	no_tool					False
+PROK2	gut_transverse																		0	no_tool					False
+PROK2	monocyte	chr3_71777835_C_A	rs7632932	3	71777835.0	C	A	0.9755804263159256	0.07685537135191899	0.2655003737611747	9.98574e-23	0.07718	0.972300182168508	0.12128388456502591	0.48591065496038893	0.9791523607463567	0.23771282458287668	0.5018381852305175	1	tested	5.066308835390046e-05	4894.0	full_cis_region_api_or_gtex_sigpairs	0.9989961200065204	False
+PROK2	neutrophil	chr3_71805436_C_T	rs6777956	3	71805436.0	C	T	0.9796192372164516	0.3107710598135891	0.6560722373842437	6.82761e-11	0.3124	0.9641735755850243	0.16468875771857294	0.48591065496038893	0.9987570023809627	0.961613958526764	0.961613958526764	1	tested	0.00012050483579167473	4887.0	full_cis_region_api_or_gtex_sigpairs	0.9973575653013091	False
+PROK2	monocyte_stim	chr3_71780635_T_G	rs35971163	3	71780635.0	T	G	0.9674582658836954	0.05788712723652117	0.24441231499864494	7.12555e-14	0.05779	0.9698721449649612	0.17586014304434439	0.48591065496038893	0.9726262999191023	0.21235927587779535	0.5018381852305175	1	tested	0.00016709856544584045	5116.0	full_cis_region_api_or_gtex_sigpairs	0.9988791808338197	False
+PTGS2	blood																		0	no_blood_result			existing_eqtlgen		False
+PTGS2	gut_sigmoid																		0	no_tool					False
+PTGS2	gut_transverse																		0	no_tool					False
+PTGS2	monocyte																		0	no_tool					False
+PTGS2	neutrophil																		0	no_tool					False
+PTGS2	monocyte_stim																		0	no_tool					False
+S100A12	blood																		0	no_blood_result			existing_eqtlgen		False
+S100A12	gut_sigmoid																		0	no_tool					False
+S100A12	gut_transverse																		0	no_tool					False
+S100A12	monocyte	chr1_153366838_A_C	rs11580993	1	153366838.0	A	C	1.0284593379979308	0.17520415588865668	0.4587846495865765	2.79997e-14	0.1758	1.0230963153570505	0.3919977794453765	0.5868916302273602	1.0324174239958814	0.22607699913372903	0.5018381852305175	1	tested	0.016988678557148997	4206.0	full_cis_region_api_or_gtex_sigpairs	0.23293155866640072	False
+S100A12	neutrophil	chr1_153386209_C_T	rs11205279	1	153386209.0	C	T	1.025858207289347	0.19097769346785753	0.4587846495865765	6.119350000000001e-19	0.1899	1.0270914037160608	0.2874442239378163	0.5868916302273602	1.0310063142151797	0.21875750936465232	0.5018381852305175	1	tested	0.01971338356185695	4221.0	full_cis_region_api_or_gtex_sigpairs	0.23297880571619373	False
+S100A12	monocyte_stim																		0	no_tool					False
+S100A8	blood																		0	no_blood_result			existing_eqtlgen		False
+S100A8	gut_sigmoid																		0	no_tool					False
+S100A8	gut_transverse	chr1_153940057_A_G_b38	chr1_153940057_A_G_b38	1	153940057.0	A	G	0.9777795219986957	0.7450023377431838	0.8553530437050979	1.00589e-05	0.7455	0.9934943863503015	0.9394156428967155	0.9579369835749778	0.9644690912987096	0.6879369788756148	0.7688707410962753	1	tested	0.00039557001037358365	2.0	full_cis_region_api_or_gtex_sigpairs	1.1640596174750393e-06	False
+S100A8	monocyte																		0	no_tool					False
+S100A8	neutrophil																		0	no_tool					False
+S100A8	monocyte_stim																		0	no_tool					False
+S100A9	blood																		0	no_blood_result			existing_eqtlgen		False
+S100A9	gut_sigmoid																		0	no_tool					False
+S100A9	gut_transverse																		0	no_tool					False
+S100A9	monocyte																		0	no_tool					False
+S100A9	neutrophil																		0	no_tool					False
+S100A9	monocyte_stim																		0	no_tool					False
+SELE	blood																		0	no_blood_result			existing_eqtlgen		False
+SELE	gut_sigmoid																		0	no_tool					False
+SELE	gut_transverse	chr1_169112554_T_G_b38	chr1_169112554_T_G_b38	1	169112554.0	T	G	0.8616366541971237	0.0018638479350299487	0.014165244306227611	1.32335e-05	0.001842	0.8625040927029904	0.01645781912273038	0.15634928166593862	0.8663561153461738	0.018033532173212224	0.13705484451641292	1	tested	0.03267243799753372	3.0	full_cis_region_api_or_gtex_sigpairs	0.0001380406138734443	False
+SELE	monocyte																		0	no_tool					False
+SELE	neutrophil																		0	no_tool					False
+SELE	monocyte_stim																		0	no_tool					False
+SERPINE1	blood							1.324	0.1043323155273475	0.2591480095356698									1	tested_existing_eqtlgen			existing_eqtlgen		False
+SERPINE1	gut_sigmoid																		0	no_tool					False
+SERPINE1	gut_transverse																		0	no_tool					False
+SERPINE1	monocyte																		0	no_tool					False
+SERPINE1	neutrophil																		0	no_tool					False
+SERPINE1	monocyte_stim	chr7_101241731_G_A	rs144639449	7	101241731.0	G	A	1.032053937262422	0.4049912596024394	0.7393609104159142	1.26474e-06	0.4041	1.0719066875556933	0.15483708096547552	0.48591065496038893	0.9936828846993512	0.8958392101396796	0.9456080551474396	1	tested	0.06758741692823808	4947.0	full_cis_region_api_or_gtex_sigpairs	0.4096457911322346	False
+SRGN	blood																		0	no_blood_result			existing_eqtlgen		False
+SRGN	gut_sigmoid																		0	no_tool					False
+SRGN	gut_transverse																		0	no_tool					False
+SRGN	monocyte																		0	no_tool					False
+SRGN	neutrophil																		0	no_tool					False
+SRGN	monocyte_stim																		0	no_tool					False
+TFPI2	blood																		0	no_blood_result			existing_eqtlgen		False
+TFPI2	gut_sigmoid																		0	no_tool					False
+TFPI2	gut_transverse																		0	no_tool					False
+TFPI2	monocyte																		0	no_tool					False
+TFPI2	neutrophil																		0	no_tool					False
+TFPI2	monocyte_stim	chr7_94042338_T_C	rs12668793	7	94042338.0	T	C	0.9925504866435416	0.6392483430342353	0.8103167240929434	8.344180000000001e-18	0.6363	0.9733191331328779	0.1911349778377709	0.48591065496038893	0.9982567945866385	0.9311327449793334	0.9562984948436397	1	tested	0.00619816688852982	4472.0	full_cis_region_api_or_gtex_sigpairs	0.1292985629970349	False
+TLR2	blood																		0	no_blood_result			existing_eqtlgen		False
+TLR2	gut_sigmoid																		0	no_tool					False
+TLR2	gut_transverse																		0	no_tool					False
+TLR2	monocyte																		0	no_tool					False
+TLR2	neutrophil																		0	no_tool					False
+TLR2	monocyte_stim	chr4_153684311_CCAGGCGGCTGCTCGGCGTTCTCT_C	rs111200466	4	153684311.0	CCAGGCGGCTGCTCGGCGTTCTCT	C	1.025375132242728	0.4165047865762178	0.7393609104159142	2.26755e-08	0.4164	1.0442332797509641	0.2765484358229725	0.5868916302273602	1.0201775990580686	0.6108022922244428	0.7459767395505152	1	tested	0.008549847880232168	5950.0	full_cis_region_api_or_gtex_sigpairs	0.21277040121427426	False
+TNC	blood																		0	no_blood_result			existing_eqtlgen		False
+TNC	gut_sigmoid																		0	no_tool					False
+TNC	gut_transverse																		0	no_tool					False
+TNC	monocyte																		0	no_tool					False
+TNC	neutrophil																		0	no_tool					False
+TNC	monocyte_stim	chr9_115142499_G_A	rs16936516	9	115142499.0	G	A	0.9780376168610114	0.2209972741496199	0.49399390692267975	4.00932e-18	0.222	0.9923113723298387	0.7446405347228191	0.8597012227883054	0.9699923230347691	0.1882447132823164	0.5018381852305175	1	tested	3.7524367847374975e-15	6169.0	full_cis_region_api_or_gtex_sigpairs	0.999999999999929	False
+TNFRSF1A	blood							1.163	0.003624814385206	0.039872958237267									1	tested_existing_eqtlgen	0.18	5978.0	existing_eqtlgen		False
+TNFRSF1A	gut_sigmoid																		0	no_tool					False
+TNFRSF1A	gut_transverse																		1	has_eqtl_no_harmonized_mr		0.0	full_cis_region_api_or_gtex_sigpairs		False
+TNFRSF1A	monocyte	chr12_6333180_A_G	rs1800692	12	6333180.0	A	G	1.1412913787891499	0.003624814385206096	0.022957157772971942	2.97101e-09	0.003586	1.2138127444688362	0.0009270948541641598	0.016837630541752264	1.127237975653544	0.038318763149413584	0.24268549994628605	1	tested	0.1721171388615845	5417.0	full_cis_region_api_or_gtex_sigpairs	0.41030282878971724	False
+TNFRSF1A	neutrophil	chr12_6342424_A_C	rs4149570	12	6342424.0	A	C	1.103566096887652	0.005012932608026855	0.027213062729288643	1.99205e-07	0.00512	1.1570974391103377	0.001329286621717284	0.016837630541752264	1.0931012422803754	0.047499593764386276	0.25785493757809697	1	tested	0.18322011304558244	5433.0	full_cis_region_api_or_gtex_sigpairs	0.36622432062175553	False
+TNFRSF1A	monocyte_stim	chr12_6335797_G_C	rs34819705	12	6335797.0	G	C	1.0214822218176394	0.6170750774519738	0.8103167240929434	1.21993e-10	0.6176	1.0409871980929608	0.46508677975651314	0.6545665789165741	0.9706060365868505	0.577962292376708	0.7320855703438301	1	tested	0.0061476113126018245	5574.0	full_cis_region_api_or_gtex_sigpairs	0.49271500955837927	False
+TREM1	blood																		0	no_blood_result			existing_eqtlgen		False
+TREM1	gut_sigmoid																		0	no_tool					False
+TREM1	gut_transverse																		0	no_tool					False
+TREM1	monocyte																		0	no_tool					False
+TREM1	neutrophil	chr6_41272198_T_C	rs4714449	6	41272198.0	T	C	1.0017189580519708	0.9176071990405235	0.9176071990405235	2.43909e-27	0.9181	0.9949421719752534	0.8122317692171359	0.8699265010608788	1.0184053552027796	0.3910623887249264	0.6916010463528669	1	tested	0.00012068525637896657	5953.0	full_cis_region_api_or_gtex_sigpairs	0.9880289018028958	False
+TREM1	monocyte_stim	chr6_41231171_T_C	rs4337930	6	41231171.0	T	C	0.9898147854314373	0.5600404293850145	0.8103167240929434	4.06842e-21	0.5626	0.97043164739969	0.18580979812831977	0.48591065496038893	1.0180769634392346	0.4273034690628823	0.6916010463528669	1	tested	0.00010833691946339578	6378.0	full_cis_region_api_or_gtex_sigpairs	0.9880441785895668	False
