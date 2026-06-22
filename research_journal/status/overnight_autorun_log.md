@@ -21,4 +21,7 @@
 ## 运行记录
 
 - **2026-06-23 ~00:55 JST** — #2 派出（tmux `cm2`，codex，纯 CPU）。
-- **2026-06-23 ~01:1x JST** — 据用户要求给 #2 brief 加"运行准则"（并行+耐心）并**重启** `cm2`。等待中。
+- **2026-06-23 ~01:1x JST** — 据用户要求给 #2 brief 加"运行准则"（并行+耐心）并**重启** `cm2`。
+- **2026-06-23 ~01:3x JST** — #2 卡在 eQTL Catalogue API（按 gene_id 查回 400）。实测出可用法并写进 brief 重启：
+  **associations 端点必须按区域查** `…/datasets/{QTD}/associations?pos={chr}:{start}-{end}&size=1000` 再过滤 molecular_trait_id；
+  免疫数据集 id（已验证）：单核 QTD000021(BLUEPRINT)/QTD000504(DICE)、**中性粒 QTD000026(BLUEPRINT)**、刺激态 QTD000414(Quach LPS)。等待中。
