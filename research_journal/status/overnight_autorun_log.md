@@ -35,4 +35,11 @@
   **CXCR2 强**：FinnGen 复制 IBD OR 0.796(p1.3e-5)/UC 0.736(p1.6e-6)✓；多工具敏感性 IVW/Egger/wmedian/LOO 全一致~0.84 无多效性✓；MVMR-CRP 方向稳(IBD OR0.749,p1.1e-10, 但 CRP F弱)✓；Steiger✓。**疑点**：单SNP反向MR IBD→CXCR2 p=3e-200（疑共定位伪反向）。
   **CCL8 部分**：血液+FinnGen+Steiger✓；MVMR不可估(1工具)、pQTL被deCODE墙挡、反向MR同疑点。
   **路人坐实**：OSM/OSMR/TREM1/IL13RA2 全 bystander。
-- **2026-06-23 ~03:25 JST — #4 派出**（会话 `cm4`，纯 CPU）：补缺口——正规双向反向MR(排cis区澄清p=3e-200)+CCL8多工具MVMR/敏感性+换可及pQTL源(SCALLOP)。等待中。
+- **2026-06-23 ~03:25 JST — #4 派出**（会话 `cm4`）：补缺口。
+- **2026-06-23 ~03:50 JST — #4 完成**（`src/28`，`results/tables/{reverse_mr_proper,ccl8_mvmr,pqtl_ccl8_v2}.tsv` 等）。**重要、非全好消息**：
+  - ✅ **反向因果疑点澄清**：排 cis 区后 IBD→CXCR2 反向变 nsnp=0 → 那个 p=3e-200 是共定位 cis 变异伪反向，非真反向。
+  - ⚠️ **CCL8 被削弱**：多工具 IVW 对 IBD p=0.10/UC p=0.50 不显著(异质+LOO不稳，OR2.35 靠单 lead SNP)；MVMR 调 CRP 后 CCL8 不显著(p=0.60，与泛炎症分不开)；SCALLOP-INF 血浆 pQTL(MCP-2) **coloc PP4=0.007 不共定位**(无蛋白层支持)。
+  - ✅ **CXCR2 仍最硬**（#3 FinnGen复制+多工具稳+调炎症稳，#4 清反向）。
+  - **战略**：4 轮严格遗传学后稳健核心收缩为 **CXCR2 一个(保护,可成药悖论) + CCL8 降级为"共定位支持但不稳健的提示" + 干净路人三联(OSM/TREM1/IL13RA2)**。遗传学臂饱和。
+- **2026-06-23 ~03:55 JST — #5 派出**（会话 `cm5`，纯 CPU）：**转新维度**——单细胞反卷积 bulk 应答队列，看哪类细胞(中性粒/髓系/成纤维)丰度预测无应答，接回 CXCR2/中性粒。bulk 数据已推 `data/interim/`。等待中。
+- **⚠️ 给用户(明晚)的战略提醒**：遗传学头条实际收缩为 CXCR2 单基因 + 路人三联，CCL8 降级。论文需据此重新权衡（CXCR2 可成药悖论 + "明星 marker 非因果" 仍是诚实卖点，但因果地图比预期薄）。等 #5 反卷积结果一并定夺。
