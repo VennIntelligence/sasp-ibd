@@ -25,3 +25,15 @@ Progress log:
   - Random-effects pooled SenMayo AUC 0.782 (95% CI 0.677-0.860), I2 46.2%; LOCO pooled AUCs remain 0.750-0.814.
 - 2026-06-22: Ran `src/25_inflammation_adjust.py`; wrote `outputs/inflammation_adjusted.tsv`. Runtime ~14 s. Pooled cohort-FE SenMayo remains positive after CRP-like adjustment (coef 0.74, p=0.022), neutrophil proxy (coef 0.87, p=0.0026), and Mayo where available (coef 0.75, p=0.0009). Stronger combined gene-inflammation+Mayo adjustment attenuates SenMayo (coef 0.51, p=0.23), so interpretation should be "partly independent, partly overlapping with inflammation."
 - 2026-06-22: Promoted current task3 tables because these are the final local CPU validation outputs for this task: `results/tables/multicohort_auc.tsv`, `results/tables/inflammation_adjusted.tsv`, `results/tables/task3_cohort_harvest.tsv`, `results/tables/task3_score_coverage.tsv`.
+
+## 2026-06-23 JST - single-cell deconvolution response
+
+- Ran `src/29_deconv_response.py` CPU-only with marker-restricted NNLS from `outputs/sc_01/*.h5ad` into five baseline bulk response cohorts.
+- Wrote `outputs/deconv/{deconv_proportions.tsv,celltype_fraction_vs_response.tsv,targeted_scores.tsv,Fig_deconv_response.png,SUMMARY.md}` and promoted final table/figure copies into `results/`.
+- Key random-effects response associations:
+  - neutrophil_marker_score: OR/SD=3.16, p=0.000192
+  - refractory_module_score: OR/SD=3.31, p=0.000137
+  - senmayo: OR/SD=3.22, p=4.2e-05
+  - Fibroblast: OR/SD=1.58, p=0.115
+  - Myeloid: OR/SD=2.65, p=4.83e-07
+- Caveat: local scRNA references do not contain an explicit neutrophil cluster, so neutrophil evidence is marker/CXCR2 based rather than an NNLS neutrophil fraction.

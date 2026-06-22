@@ -1,0 +1,60 @@
+dataset	broad_cell_type	cell_type	n_cells
+Smillie_UC	B_Plasma	Plasma	81857
+Smillie_UC	B_Plasma	Follicular	21318
+Smillie_UC	B_Plasma	Cycling B	2139
+Smillie_UC	B_Plasma	GC	911
+Smillie_UC	Endothelial	Post-capillary Venules	2275
+Smillie_UC	Endothelial	Endothelial	2258
+Smillie_UC	Endothelial	Microvascular	661
+Smillie_UC	Epithelial	Cycling TA	16791
+Smillie_UC	Epithelial	TA 1	14859
+Smillie_UC	Epithelial	TA 2	13825
+Smillie_UC	Epithelial	Immature Goblet	7205
+Smillie_UC	Epithelial	Immature Enterocytes 2	7064
+Smillie_UC	Epithelial	Enterocyte Progenitors	5848
+Smillie_UC	Epithelial	Secretory TA	4338
+Smillie_UC	Epithelial	Enterocytes	3088
+Smillie_UC	Epithelial	Immature Enterocytes 1	2873
+Smillie_UC	Epithelial	Best4+ Enterocytes	2449
+Smillie_UC	Epithelial	Stem	2172
+Smillie_UC	Epithelial	Goblet	1359
+Smillie_UC	Epithelial	Tuft	610
+Smillie_UC	Epithelial	Enteroendocrine	506
+Smillie_UC	Epithelial	M cells	289
+Smillie_UC	Fibroblast	WNT2B+ Fos-lo 1	6322
+Smillie_UC	Fibroblast	WNT2B+ Fos-hi	4273
+Smillie_UC	Fibroblast	WNT5B+ 2	3310
+Smillie_UC	Fibroblast	WNT2B+ Fos-lo 2	2704
+Smillie_UC	Fibroblast	WNT5B+ 1	2311
+Smillie_UC	Fibroblast	Inflammatory Fibroblasts	2263
+Smillie_UC	Fibroblast	Myofibroblasts	1874
+Smillie_UC	Fibroblast	RSPO3+	358
+Smillie_UC	Mast	CD69+ Mast	5129
+Smillie_UC	Mast	CD69- Mast	141
+Smillie_UC	Myeloid	Macrophages	15489
+Smillie_UC	Myeloid	DC2	2388
+Smillie_UC	Myeloid	Inflammatory Monocytes	1644
+Smillie_UC	Myeloid	DC1	428
+Smillie_UC	Myeloid	Cycling Monocytes	349
+Smillie_UC	Stromal_other	Glia	1174
+Smillie_UC	Stromal_other	Pericytes	699
+Smillie_UC	T_NK	CD4+ Memory	26081
+Smillie_UC	T_NK	CD8+ LP	14650
+Smillie_UC	T_NK	CD4+ Activated Fos-hi	10318
+Smillie_UC	T_NK	CD4+ Activated Fos-lo	9358
+Smillie_UC	T_NK	Tregs	6393
+Smillie_UC	T_NK	CD8+ IELs	3507
+Smillie_UC	T_NK	NKs	2007
+Smillie_UC	T_NK	Cycling T	553
+Smillie_UC	T_NK	ILCs	508
+Smillie_UC	T_NK	CD8+ IL17+	490
+Smillie_UC	T_NK	CD4+ PD1+	414
+Smillie_UC	Unknown	MT-hi	369
+Martin_CD	B_Plasma	B_Plasma	34732
+Martin_CD	Endothelial	Endothelial	1933
+Martin_CD	Epithelial	Epithelial	7038
+Martin_CD	Fibroblast	Fibroblast	2490
+Martin_CD	Mast	Mast	1080
+Martin_CD	Myeloid	Myeloid	6727
+Martin_CD	T_NK	T_NK	45424
+Martin_CD	Unknown	Unknown	4425

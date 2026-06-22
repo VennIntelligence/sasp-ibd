@@ -41,5 +41,10 @@
   - ⚠️ **CCL8 被削弱**：多工具 IVW 对 IBD p=0.10/UC p=0.50 不显著(异质+LOO不稳，OR2.35 靠单 lead SNP)；MVMR 调 CRP 后 CCL8 不显著(p=0.60，与泛炎症分不开)；SCALLOP-INF 血浆 pQTL(MCP-2) **coloc PP4=0.007 不共定位**(无蛋白层支持)。
   - ✅ **CXCR2 仍最硬**（#3 FinnGen复制+多工具稳+调炎症稳，#4 清反向）。
   - **战略**：4 轮严格遗传学后稳健核心收缩为 **CXCR2 一个(保护,可成药悖论) + CCL8 降级为"共定位支持但不稳健的提示" + 干净路人三联(OSM/TREM1/IL13RA2)**。遗传学臂饱和。
-- **2026-06-23 ~03:55 JST — #5 派出**（会话 `cm5`，纯 CPU）：**转新维度**——单细胞反卷积 bulk 应答队列，看哪类细胞(中性粒/髓系/成纤维)丰度预测无应答，接回 CXCR2/中性粒。bulk 数据已推 `data/interim/`。等待中。
-- **⚠️ 给用户(明晚)的战略提醒**：遗传学头条实际收缩为 CXCR2 单基因 + 路人三联，CCL8 降级。论文需据此重新权衡（CXCR2 可成药悖论 + "明星 marker 非因果" 仍是诚实卖点，但因果地图比预期薄）。等 #5 反卷积结果一并定夺。
+- **2026-06-23 ~03:55 JST — #5 派出**（会话 `cm5`，纯 CPU）：**转新维度**——单细胞反卷积 bulk 应答队列，看哪类细胞(中性粒/髓系/成纤维)丰度预测无应答，接回 CXCR2/中性粒。bulk 数据已推 `data/interim/`。
+- **2026-06-23 ~04:02 JST — #5 完成**（`src/29`，`outputs/deconv/`，`results/tables/{celltype_fraction_vs_response,deconv_proportions,targeted_scores,deconv_incremental_vs_senmayo}.tsv`，`results/figures/Fig_deconv_response.png`）。
+  - NNLS 细胞丰度：**Myeloid 最强预测无应答**（random-effects OR/SD=2.65, p=4.83e-07）；Fibroblast 方向为正但不显著（OR/SD=1.58, p=0.115）。
+  - 中性粒：本地 scRNA 参考没有显式 neutrophil cluster，所以不能声称 NNLS 中性粒比例；但 bulk neutrophil/CXCR2 marker 很强（neutrophil marker OR/SD=3.16, p=0.000192；CXCR2 expression OR/SD=2.93, p=0.00103）。
+  - 难治模块：refractory module score OR/SD=3.31, p=0.000137；与 SenMayo（OR/SD=3.22, p=4.2e-05）几乎同量级。
+  - 增量：Myeloid 加到 SenMayo 后 ΔAUC=+0.0077、LRT p=0.069，提示与 bulk SASP/炎症高度重叠，只提供弱增量。
+- **⚠️ 给用户(明晚)的战略提醒**：遗传学头条实际收缩为 CXCR2 单基因 + 路人三联，CCL8 降级；反卷积则把临床无应答接回 **髓系/中性粒-CXCR2/难治炎症模块**，但它主要是描述性预测层，和 SenMayo 高度冗余。论文应把"CXCR2 可成药悖论 + marker 非因果/因果分离"作为诚实卖点，而不是夸大成多基因因果地图。
