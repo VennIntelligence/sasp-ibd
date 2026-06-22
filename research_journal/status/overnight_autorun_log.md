@@ -25,4 +25,9 @@
 - **2026-06-23 ~01:1x JST** — 据用户要求给 #2 brief 加"运行准则"（并行+耐心）并**重启** `cm2`。
 - **2026-06-23 ~01:3x JST** — #2 卡在 eQTL Catalogue API（按 gene_id 查回 400）。实测出可用法并写进 brief 重启：
   **associations 端点必须按区域查** `…/datasets/{QTD}/associations?pos={chr}:{start}-{end}&size=1000` 再过滤 molecular_trait_id；
-  免疫数据集 id（已验证）：单核 QTD000021(BLUEPRINT)/QTD000504(DICE)、**中性粒 QTD000026(BLUEPRINT)**、刺激态 QTD000414(Quach LPS)。等待中。
+  免疫数据集 id（已验证）：单核 QTD000021(BLUEPRINT)/QTD000504(DICE)、**中性粒 QTD000026(BLUEPRINT)**、刺激态 QTD000414(Quach LPS)。
+- **2026-06-23 ~02:35 JST — #2 完成。** 多语境因果地图（`results/tables/module_causal_map_multicontext.tsv`，`src/26`）。
+  **正面**：CXCR2 在**中性粒**独立确认因果保护（OR 0.851, FDR 1.05e-07, **coloc PP4 0.935**），加血液=双语境双确认。
+  **阴性/路人**：CCL8 单核无可用工具(仍 blood-only)；OSM/OSMR/IL13RA2 无信号；**TREM1=路人**(中性粒 eQTL p=2.4e-27 但 MR OR 1.002 p=0.92)。
+  因果地图未扩大（仍 CCL8+CXCR2）→ 走"加固核心 + 坐实路人"分支。技术债：肠 allpairs phenotype-id 映射没对上，肠 coloc 仍近似(低优先后补)。
+- **2026-06-23 ~02:40 JST — #3 派出**（会话 `cm3`，纯 CPU）：CCL8/CXCR2 加固——反向MR/Steiger/MVMR-CRP/FinnGen复制CXCR2/多工具敏感性/CCL8 pQTL(尽力)/路人判定。等待中。
