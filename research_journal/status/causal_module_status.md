@@ -34,3 +34,12 @@
 - Steiger supports exposure->outcome for the blood CCL8/CXCR2 lead instruments. CXCR2 FinnGen R12 replicates for IBD and UC but not CD. CXCR2 MVMR-CRP keeps the protective direction, but CRP conditional F is weak; CCL8 MVMR is not estimable with one instrument.
 - deCODE CCL8 pQTL coloc is best-effort blocked because the public deCODE proteomics folder requires an interactive/token workflow and no local CCL8 pQTL file is present.
 - OSM/OSMR/TREM1/IL13RA2 are formalised as bystanders in `bystander_triage.tsv`.
+
+
+## 2026-06-23 JST - causal hardening 2
+
+- Ran `src/28_causal_hardening2.py` CPU-only with `n_jobs=30`.
+- Wrote strict bidirectional reverse-MR with genome-wide disease instruments, 1Mb distance clumping, and target-gene cis exclusion to `outputs/causal_hardening2/reverse_mr_proper.tsv`.
+- Built relaxed CCL8 cis instruments from eQTLGen (`p<0.005`, 100kb distance clump), then ran CCL8 MVMR-CRP and IVW/Egger/weighted-median/leave-one-out sensitivity.
+- Audited CCL8/MCP-2 plasma pQTL sources including SCALLOP CVD1 Zenodo probes, SCALLOP-INF GWAS Catalog accession GCST90274822, and the deCODE summary-data landing page; all source attempts are recorded in `pqtl_ccl8_v2.tsv`.
+- Promoted the hardening2 final figure and requested tables into `results/`.

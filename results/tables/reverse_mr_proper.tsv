@@ -1,0 +1,23 @@
+analysis	cis_excluded	n_disease_instruments	n_removed_target_cis	mean_F	exposure	gene	method	nsnp	theta	se	p	OR	q	q_p	status	egger_intercept	egger_intercept_se	egger_intercept_p	fdr
+disease_to_expression	False	131	0	52.04591836734694	IBD	CCL8	IVW	1	0.43934526463748025	0.08892368786558187	7.784259990912275e-07	1.5516909389211346	5.969016997500253e-31		ok				8.978485193773279e-07
+disease_to_expression	False	131	0	52.04591836734694	IBD	CCL8	MR-Egger	1							need >=3 SNPs				
+disease_to_expression	False	131	0	52.04591836734694	IBD	CCL8	weighted_median	1							need >=3 SNPs				
+disease_to_expression	True	131	0	52.04591836734694	IBD	CCL8	IVW	1	0.43934526463748025	0.08892368786558187	7.784259990912275e-07	1.5516909389211346	5.969016997500253e-31		ok				8.978485193773279e-07
+disease_to_expression	True	131	0	52.04591836734694	IBD	CCL8	MR-Egger	1							need >=3 SNPs				
+disease_to_expression	True	131	0	52.04591836734694	IBD	CCL8	weighted_median	1							need >=3 SNPs				
+disease_to_expression	False	131	0	38.93759999999999	IBD	CXCR2	IVW	1	-3.3208289509756934	0.10999910402839697	3.243527482409598e-200	0.03612287524684317	4.1859396958847836e-29		ok				1.6217637412047989e-199
+disease_to_expression	False	131	0	38.93759999999999	IBD	CXCR2	MR-Egger	1							need >=3 SNPs				
+disease_to_expression	False	131	0	38.93759999999999	IBD	CXCR2	weighted_median	1							need >=3 SNPs				
+disease_to_expression	True	130	1		IBD	CXCR2	IVW	0							no harmonised instruments				
+disease_to_expression	False	91	0	75.26992512981523	CD	CCL8	IVW	1	0.28136114494533887	0.05727103585436795	8.978485193773279e-07	1.3249320100414281	0.0		ok				8.978485193773279e-07
+disease_to_expression	False	91	0	75.26992512981523	CD	CCL8	MR-Egger	1							need >=3 SNPs				
+disease_to_expression	False	91	0	75.26992512981523	CD	CCL8	weighted_median	1							need >=3 SNPs				
+disease_to_expression	True	91	0	75.26992512981523	CD	CCL8	IVW	1	0.28136114494533887	0.05727103585436795	8.978485193773279e-07	1.3249320100414281	0.0		ok				8.978485193773279e-07
+disease_to_expression	True	91	0	75.26992512981523	CD	CCL8	MR-Egger	1							need >=3 SNPs				
+disease_to_expression	True	91	0	75.26992512981523	CD	CCL8	weighted_median	1							need >=3 SNPs				
+disease_to_expression	False	91	0		CD	CXCR2	IVW	0							no harmonised instruments				
+disease_to_expression	True	91	0		CD	CXCR2	IVW	0							no harmonised instruments				
+disease_to_expression	False	64	0		UC	CCL8	IVW	0							no harmonised instruments				
+disease_to_expression	True	64	0		UC	CCL8	IVW	0							no harmonised instruments				
+disease_to_expression	False	64	0		UC	CXCR2	IVW	0							no harmonised instruments				
+disease_to_expression	True	64	0		UC	CXCR2	IVW	0							no harmonised instruments				

@@ -1,0 +1,6 @@
+gene	protein	source	accession	url	http_status	nsnp	PP4	status	PP0	PP1	PP2	PP3	local_path
+CCL8	MCP-2/CCL8	SCALLOP CVD1 Zenodo MCP-2 candidate		https://zenodo.org/records/2615265/files/MCP-2.txt.gz?download=1	HTTP/1.1 404 NOT FOUND	0		probed_only					
+CCL8	MCP-2/CCL8	SCALLOP CVD1 Zenodo CCL8 candidate		https://zenodo.org/records/2615265/files/CCL8.txt.gz?download=1	HTTP/1.1 404 NOT FOUND	0		probed_only					
+CCL8	MCP-2/CCL8	SCALLOP-INF GWAS Catalog MCP.2/CCL8	GCST90274822	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90274001-GCST90275000/GCST90274822/GCST90274822.tsv.gz	HTTP/1.1 200 OK	1428	0.006698125622659832	ok	0.8230582454839184	0.05815516888860404	0.10469750309438725	0.007390956910430567	/home/ujs/mycode/sasp-ibd/data/raw/gwas/pqtl/GCST90274822_CCL8_MCP2.tsv.gz
+CCL8	MCP-2/CCL8	SCALLOP-INF GWAS Catalog MCP.2/CCL8 harmonised dir	GCST90274822	https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90274001-GCST90275000/GCST90274822/harmonised/	HTTP/1.1 200 OK	0		probed_only					
+CCL8	MCP-2/CCL8	deCODE summary data landing page		https://www.decode.com/summarydata/	HTTP/1.1 200 OK	0		probed_only					
