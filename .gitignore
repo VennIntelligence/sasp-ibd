@@ -76,3 +76,4 @@ id_rsa*
 /outputs/*
 !/outputs/.gitkeep
 /models/
+/tmp/

@@ -1,0 +1,5 @@
+gene	perturbation	expected_direction	n_model_dataset	projection_mean_effect	projection_direction_match_n	projection_significant_n	projection_significant_match_n	projection_models_with_sig_match	projection_consistent_significant	delta_p_mean_effect	delta_p_direction_match_n	delta_p_significant_n	delta_p_significant_match_n	delta_p_models_with_sig_match	delta_p_consistent_significant
+CCL8	delete	-1	4	0.027908317984148025	0	0	0	0	False	-0.0001584070492017249	2	0	0	0	False
+CCL8	overexpress	1	4	-0.0005520638519730505	1	0	0	0	False	0.001686620681263475	2	0	0	0	False
+CXCR2	delete	1	4	-0.006042604594821565	1	0	0	0	False	7.155305824207498e-05	2	0	0	0	False
+CXCR2	overexpress	-1	4	0.019944619277471275	1	0	0	0	False	0.0015485972833510745	2	0	0	0	False

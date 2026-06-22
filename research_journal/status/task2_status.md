@@ -37,3 +37,34 @@ Date: 2026-06-22
 
 - The single-cell datasets do not include biologic response labels, so response triangulation uses existing bulk-response results (`results/tables/multicohort_auc.tsv`) rather than single-cell response modeling.
 - `sc_04` intentionally uses a focused curated SASP ligand-receptor score instead of installing CellPhoneDB into the main environment. This preserves the required environment isolation principle and keeps the CCL8/CXCR2 axis auditable, but it is not a full CellPhoneDB database-wide permutation analysis.
+## task_gpu_fix stage0
+- `git pull --ff-only`: already up to date.
+- Read task plan, AGENTS, `src/sc_03_foundation_perturb.py`, and `outputs/sc_04/task2_honest_summary.md`.
+- Downloaded `Geneformer-V2-104M` weights from the official `ctheodoris/Geneformer` Hugging Face repo into `models/Geneformer/Geneformer-V2-104M`.
+- D reconnaissance found GSE282122 as a public anti-TNF longitudinal IBD single-cell atlas with remission outcomes; processed filtered archive is 2.8 GB, so it is a viable follow-on dataset after A/B/C hardening.
+
+## sc_05 benchmark note
+- Geneformer V2-104M with batch_size=96 on 512 Martin cells OOMed on a 24 GB RTX 3090 (process used about 17 GB and needed another 6 GB).
+- Formal schedule will use V2 one job per GPU with smaller batch, and V1 jobs separately; this is a measured memory adaptation rather than the optimistic 4-slot plan.
+
+## scGPT environment attempt
+- Created isolated `.venv-scgpt` and installed `scgpt==0.2.4` without touching the main `.venv`.
+- Added missing `IPython`, but `import scgpt` fails because `torchtext/libtorchtext.so` has an undefined symbol against the installed torch ABI.
+- Per task fallback, scGPT is not used in the main matrix; cross-model evidence uses Geneformer V1-10M and V2-104M.
+
+## sc_05 GPU0 failure
+- During the V2-104M wave, physical GPU0 disappeared from `nvidia-smi` with `Unable to determine the device handle ... Unknown Error`.
+- The `gf_v2_104m_smillie` job failed at 6/205 perturb genes with CUDA `unspecified launch failure`; no completed effect table was written.
+- Physical GPU1 remained healthy and continued `gf_v2_104m_martin` at ~99% utilization.
+- Recovery plan: do not reboot/reset from the script; allow GPU1 job to finish, then continue remaining jobs on GPU1 with conservative batch size.
+
+## sc_05 CUDA unavailable after GPU failure
+- After both V2 jobs exited, `nvidia-smi` still reported GPU0 as `Unable to determine the device handle ... Unknown Error`; GPU1 appeared idle.
+- A fresh PyTorch process with `CUDA_VISIBLE_DEVICES=1` could not initialize CUDA (`cuda=False`, `CUDA unknown error`), so no remaining GPU work can proceed safely without driver/device reset or reboot.
+- No completed `*_effects.tsv` tables were written for the V2 wave; only null panel files exist. The next executable step after hardware recovery is to rerun remaining jobs conservatively on a healthy GPU.
+
+## sc_05 perturbation hardening
+- combined 4 model x dataset jobs from `outputs/sc_05_perturb_stats/jobs/`.
+- outputs: `outputs/sc_05_perturb_stats/perturb_stats.tsv`, `perturb_consensus.tsv`, `classifier_metrics.tsv`, `Fig_task2_perturb_stats.png`.
+- promoted final table/figure copies to `results/`; summary: `outputs/sc_05_perturb_stats/task2_perturb_stats_summary.md`.
+
