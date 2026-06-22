@@ -1,5 +1,9 @@
 # 结果汇总（诚实版）— IBD 黏膜衰老/SASP 与生物制剂应答
 
+> ⚠️ **2026-06-23 已重大转型**：项目已退出「衰老/SASP」框架，转向**「难治性 IBD 炎症-分泌模块的因果解剖」**。
+> 本文档记录的是**转型前**的衰老/SASP 分析——它们没作废，但**定位已改**（SASP「预测应答」被证明只是泛炎症的别名、并非新颖；衰老停滞臂为零）。
+> **先读新北极星：[`PIVOT_2026-06-23_causal_refractory_module.md`](PIVOT_2026-06-23_causal_refractory_module.md)**，它解释了为什么转、新论点、各结果的新定位。
+
 > 自动化分析于 2026-06-21/22 完成。本文档如实记录**支持**与**不支持**的结果，未做美化。
 > 共两大层：**因果遗传层（第3阶段，新增，最有冲击力）** + **转录组层（第1-2阶段）**。
 > 小白友好的完整讲解见根目录 `讲解_给你听.md`。
@@ -39,6 +43,13 @@
 **CRP 调整 MVMR（task1，探索性）**：
 - CRP GWAS 已下载并用于两暴露 MVMR。CXCR2 调整 CRP 后在 IBD/CD/UC 中仍保持保护方向（IBD OR≈0.749，p≈1.1e-10）。
 - 但 CRP 条件 F 很弱（约 2.09），且 CCL8 可用工具不足，故该结果只能作为"调整泛炎症后 CXCR2 方向仍稳"的探索性支持，不能当作强 MVMR 结论。
+
+**LTL→IBD 机体衰老 MR（task1，Codd 2021）**：
+- LTL harmonised GWAS `GCST90002398` 已下载并校验；`src/20_ltl_mr.py` 可 headless 重跑。输出：`outputs/mr/mr_LTL.tsv`、`outputs/mr/mr_LTL_instruments.tsv`、`outputs/mr/mr_LTL_leave_one_out.tsv`，另有 MHC 排除敏感性 `outputs/mr/mr_LTL_sensitivity.tsv`。
+- 593 个 genome-wide significant LTL SNP 经 500kb distance-clump 后进入候选；与 de Lange IBD/CD/UC 可 harmonise 的 SNP 数分别为 439/436/439。
+- 主结果方向**反直觉**：遗传预测的**更长 LTL**与更高 IBD/CD/UC 风险相关（IVW：IBD OR≈1.26, p≈2.3e-15；CD OR≈1.43, p≈1.4e-21；UC OR≈1.12, p≈0.0028）。换成"更短 LTL/机体衰老"方向则是保护性估计（IBD OR≈0.79；CD OR≈0.70；UC OR≈0.90），不支持原先"短端粒增加 IBD 风险"假设。
+- 稳健性：MR-Egger 斜率支持 IBD/CD，Egger 截距不显著（无明显方向性水平多效性）；leave-one-out 不翻转主方向。排除 chr6:25-34Mb MHC 后，IBD/CD 仍显著（IBD IVW OR≈1.21, p≈6.0e-10；CD OR≈1.30, p≈2.7e-11），UC 变弱（IVW OR≈1.12, p≈0.0045；weighted median≈1.00, p≈0.96）。
+- 判读：LTL 不是支持"整体机体衰老驱动 IBD"的正交证据；更像是端粒生物学/免疫增殖/遗传多效性与 IBD 风险的复杂关系。可作为诚实的阴性/反向证据，与 bulk 里的"不是全局衰老时钟，而是 SASP/趋化分泌臂"相互呼应。
 
 ---
 
