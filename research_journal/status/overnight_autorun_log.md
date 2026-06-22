@@ -30,4 +30,9 @@
   **正面**：CXCR2 在**中性粒**独立确认因果保护（OR 0.851, FDR 1.05e-07, **coloc PP4 0.935**），加血液=双语境双确认。
   **阴性/路人**：CCL8 单核无可用工具(仍 blood-only)；OSM/OSMR/IL13RA2 无信号；**TREM1=路人**(中性粒 eQTL p=2.4e-27 但 MR OR 1.002 p=0.92)。
   因果地图未扩大（仍 CCL8+CXCR2）→ 走"加固核心 + 坐实路人"分支。技术债：肠 allpairs phenotype-id 映射没对上，肠 coloc 仍近似(低优先后补)。
-- **2026-06-23 ~02:40 JST — #3 派出**（会话 `cm3`，纯 CPU）：CCL8/CXCR2 加固——反向MR/Steiger/MVMR-CRP/FinnGen复制CXCR2/多工具敏感性/CCL8 pQTL(尽力)/路人判定。等待中。
+- **2026-06-23 ~02:40 JST — #3 派出**（会话 `cm3`，纯 CPU）：CCL8/CXCR2 加固。
+- **2026-06-23 ~03:20 JST — #3 完成**（`src/27`，`results/tables/{reverse_mr,steiger,mvmr_crp,finngen_cxcr2,mr_sensitivity,pqtl_ccl8}.tsv`）。
+  **CXCR2 强**：FinnGen 复制 IBD OR 0.796(p1.3e-5)/UC 0.736(p1.6e-6)✓；多工具敏感性 IVW/Egger/wmedian/LOO 全一致~0.84 无多效性✓；MVMR-CRP 方向稳(IBD OR0.749,p1.1e-10, 但 CRP F弱)✓；Steiger✓。**疑点**：单SNP反向MR IBD→CXCR2 p=3e-200（疑共定位伪反向）。
+  **CCL8 部分**：血液+FinnGen+Steiger✓；MVMR不可估(1工具)、pQTL被deCODE墙挡、反向MR同疑点。
+  **路人坐实**：OSM/OSMR/TREM1/IL13RA2 全 bystander。
+- **2026-06-23 ~03:25 JST — #4 派出**（会话 `cm4`，纯 CPU）：补缺口——正规双向反向MR(排cis区澄清p=3e-200)+CCL8多工具MVMR/敏感性+换可及pQTL源(SCALLOP)。等待中。
