@@ -1,0 +1,24 @@
+[project]
+name = "ibd-senescence"
+version = "0.1.0"
+description = "IBD mucosal cellular senescence / SASP vs biologic response — public data, pure-Python pipeline"
+requires-python = ">=3.14"
+dependencies = [
+    "numpy>=2.4",
+    "pandas>=3.0",
+    "scikit-learn>=1.9",
+    "scipy>=1.18",
+    "statsmodels>=0.14",
+    "matplotlib>=3.11",
+    "seaborn>=0.13",
+    "pyarrow>=24.0",
+    "joblib>=1.5",
+    "pydantic>=2.13",
+]
+
+[project.optional-dependencies]
+# pulled in on demand for heavy/large-table work (see AGENTS.md)
+accel = ["polars>=1.0", "numba>=0.60"]
+
+[tool.ruff]
+line-length = 100

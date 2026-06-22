@@ -1,0 +1,77 @@
+# 这份 .gitignore 同时服务 git 和 rsync（push.sh 用 --filter=':- .gitignore'）。
+# 改这里 = 同时改"提交什么"和"同步什么"，单一真相源。
+
+# ─── Python 环境 / 缓存 ─────────────────────────────────────
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ─── macOS / 编辑器垃圾 ────────────────────────────────────
+.DS_Store
+._*
+.AppleDouble
+.Spotlight-V100
+.Trashes
+.fseventsd
+*~
+*.swp
+.idea/
+.vscode/
+
+# ─── 凭据（本库 PUBLIC——任何密钥/令牌都不许进）────────────
+.env
+.env.*
+*.pem
+*.key
+*.token
+auth.json
+secrets.*
+id_ed25519*
+id_rsa*
+
+# ─── 大件 / 二进制数据（永不提交，只留在 devbox）──────────
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.gct
+*.gct.gz
+*.bam
+*.bai
+*.cram
+*.crai
+*.vcf
+*.vcf.gz
+*.bcf
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bigwig
+*.bw
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.log
+
+# ─── data/ 布局（见 AGENTS.md）────────────────────────────
+# raw=不可变源 / interim=可重生派生，都是大件 → 只留 devbox。
+# 仅保留小而关键的参考基因集 data/external/（衰老 gene sets，几 KB）。
+/data/*
+!/data/external/
+
+# ─── outputs/ = 机器吐的可弃 scratch（AGENTS.md）───────────
+# devbox 重跑即得，永不同步。论文终版在 results/（已跟踪）。
+/outputs/*
+!/outputs/.gitkeep
