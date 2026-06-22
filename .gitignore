@@ -75,3 +75,4 @@ id_rsa*
 # devbox 重跑即得，永不同步。论文终版在 results/（已跟踪）。
 /outputs/*
 !/outputs/.gitkeep
+/models/
