@@ -1,124 +1,80 @@
-"""Mendelian randomization: senescence-gene expression (eQTLGen instruments)
--> IBD / CD / UC (de Lange 2017 GWAS). Single-instrument Wald ratio per gene,
-allele-harmonised by rsid, FDR across genes. Outputs tables + forest plot.
-"""
-import os
-import shlex
-import subprocess
+"""MR for GTEx colon eQTL instruments against de Lange IBD/CD/UC GWAS."""
+from __future__ import annotations
+
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
+from pydantic import BaseModel, ConfigDict, field_validator
 from scipy import stats
 from statsmodels.stats.multitest import multipletests
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
 
-BASE = "/Users/ujs/Downloads/lzy"
-GWAS = {"IBD": f"{BASE}/data/raw/gwas/IBD.h.tsv.gz",
-        "CD": f"{BASE}/data/raw/gwas/CD.h.tsv.gz",
-        "UC": f"{BASE}/data/raw/gwas/UC.h.tsv.gz"}
-inst = pd.read_csv(f"{BASE}/outputs/mr/instruments.tsv", sep="\t")
-rsids = set(inst["rsid"])
-rsfile = f"{BASE}/outputs/mr/_rsids.txt"
-open(rsfile, "w").write("\n".join(sorted(rsids)) + "\n")
-print(f"instruments: {len(inst)} genes / {len(rsids)} SNPs")
+from causal_module_utils import gwas_lookup, harmonised_beta
+from paths import P
 
 
-def gwas_lookup(path):
-    """Look up instrument rsids in a harmonised GWAS with an awk hash join."""
-    hdr = subprocess.run(f"gunzip -c {path} | head -1", shell=True,
-                         capture_output=True, text=True).stdout.rstrip("\n").split("\t")
-    i = {c: k for k, c in enumerate(hdr)}
-    required = [
-        "hm_rsid", "hm_beta", "hm_effect_allele", "hm_other_allele",
-        "beta", "effect_allele", "other_allele", "standard_error", "p_value",
-    ]
-    missing = [c for c in required if c not in i]
-    if missing:
-        raise ValueError(f"{path} missing required GWAS columns: {missing}")
-    c = {name: i[name] + 1 for name in required}
-    cmd = (
-        f"gunzip -c {shlex.quote(path)} | "
-        "awk -F'\\t' -v OFS='\\t' "
-        f"-v rs={c['hm_rsid']} -v hb={c['hm_beta']} "
-        f"-v hea={c['hm_effect_allele']} -v hoa={c['hm_other_allele']} "
-        f"-v b={c['beta']} -v ea={c['effect_allele']} -v oa={c['other_allele']} "
-        f"-v se={c['standard_error']} -v pv={c['p_value']} "
-        "'NR==FNR{want[$1]; next} FNR==1{next} "
-        "($rs in want){print $rs,$hb,$hea,$hoa,$b,$ea,$oa,$se,$pv}' "
-        f"{shlex.quote(rsfile)} -"
-    )
-    out = subprocess.run(cmd, shell=True, capture_output=True, text=True, check=True).stdout
-    d = {}
-    for line in out.splitlines():
-        p = line.split("\t")
-        if len(p) != 9:
-            continue
-        rs, hm_beta, hm_ea, hm_oa, beta_raw, ea_raw, oa_raw, se_raw, p_raw = p
-        if rs not in rsids:
-            continue
-        try:
-            beta = hm_beta
-            ea, oa = hm_ea, hm_oa
-            if beta == "NA":
-                beta, ea, oa = beta_raw, ea_raw.upper(), oa_raw.upper()
-            d[rs] = {"ea": ea.upper(), "oa": oa.upper(),
-                     "beta": float(beta), "se": float(se_raw),
-                     "p": float(p_raw)}
-        except (ValueError, KeyError, IndexError):
-            continue
-    return d
+OUTCOMES = {
+    "IBD": "IBD.h.tsv.gz",
+    "CD": "CD.h.tsv.gz",
+    "UC": "UC.h.tsv.gz",
+}
 
 
-def harmonise(beta_g, ea, oa, assessed, other):
-    """align GWAS beta to the eQTL assessed allele."""
-    if ea == assessed and oa == other:
-        return beta_g
-    if ea == other and oa == assessed:
-        return -beta_g
-    return None  # allele mismatch / ambiguous
+class Inputs(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
+    out_dir: Path = P.out("causal_module")
+    gwas_dir: Path = P.raw / "gwas"
+
+    @field_validator("out_dir")
+    @classmethod
+    def have_instruments(cls, v: Path) -> Path:
+        if not (v / "instruments_gut.tsv").exists():
+            raise FileNotFoundError("run src/13_build_instruments.py first")
+        return v
 
 
-all_res = {}
-for outcome, path in GWAS.items():
-    if not os.path.exists(path):
-        print(f"skip {outcome} (not downloaded)"); continue
-    g = gwas_lookup(path)
-    rows = []
-    for _, r in inst.iterrows():
-        hit = g.get(r["rsid"])
-        if not hit:
-            continue
-        bg = harmonise(hit["beta"], hit["ea"], hit["oa"], r["assessed"], r["other"])
-        if bg is None:
-            continue
-        theta = bg / r["beta_eqtl"]                 # effect of +1 expr unit on log-OR
-        se = abs(hit["se"] / r["beta_eqtl"])        # Wald-ratio SE (1st order)
-        z = theta / se
-        rows.append({"gene": r["gene"], "rsid": r["rsid"],
-                     "theta": theta, "se": se, "OR": np.exp(theta),
-                     "p_mr": 2 * stats.norm.sf(abs(z)),
-                     "gwas_p": hit["p"], "eqtl_p": r["p_eqtl"]})
-    res = pd.DataFrame(rows)
+def run_outcome(outcome: str, gwas_path: Path, inst: pd.DataFrame, out_dir: Path) -> pd.DataFrame:
+    gwas = gwas_lookup(gwas_path, inst, out_dir / f"_gwas_keys_{outcome}.txt")
+    if not len(gwas):
+        raise RuntimeError(f"no GWAS hits for {outcome}")
+    merged = inst.merge(gwas, on=["chrom", "pos"], how="left")
+    merged["beta_gwas_alt"] = merged.apply(harmonised_beta, axis=1)
+    merged = merged.dropna(subset=["beta_gwas_alt", "se_gwas"]).copy()
+    merged = merged[(merged["beta_eqtl"] != 0) & (merged["se_gwas"] > 0)]
+    theta = merged["beta_gwas_alt"] / merged["beta_eqtl"]
+    se = (merged["se_gwas"] / merged["beta_eqtl"]).abs()
+    z = theta / se
+    res = merged[
+        [
+            "gene", "tissue", "variant_id", "rsid", "chrom", "pos", "ref", "alt",
+            "beta_eqtl", "se_eqtl", "p_eqtl", "beta_gwas_alt", "se_gwas", "p_gwas",
+        ]
+    ].copy()
+    res["theta"] = theta
+    res["se"] = se
+    res["OR"] = np.exp(theta.clip(-20, 20))
+    res["p_mr"] = 2 * stats.norm.sf(np.abs(z))
+    res["fdr"] = multipletests(res["p_mr"], method="fdr_bh")[1] if len(res) else []
+    res = res.sort_values(["p_mr", "gene", "tissue"])
+    res.to_csv(out_dir / f"mr_gut_{outcome}.tsv", sep="\t", index=False)
+    print(f"{outcome}: tested {res['gene'].nunique()} genes / {len(res)} gene-tissue rows")
     if len(res):
-        res["fdr"] = multipletests(res["p_mr"], method="fdr_bh")[1]
-        res = res.sort_values("p_mr")
-        res.to_csv(f"{BASE}/outputs/mr/mr_{outcome}.tsv", sep="\t", index=False)
-        all_res[outcome] = res
-        nsig = (res.fdr < 0.05).sum()
-        print(f"\n{outcome}: tested {len(res)} genes, FDR<0.05: {nsig}")
-        print(res.head(12)[["gene", "OR", "p_mr", "fdr", "gwas_p"]].to_string(index=False))
+        print(res.head(12)[["gene", "tissue", "OR", "p_mr", "fdr", "p_gwas"]].to_string(index=False))
+    return res
 
-# ---- forest plot of top IBD hits ----
-if "IBD" in all_res:
-    r = all_res["IBD"].head(15).iloc[::-1]
-    fig, ax = plt.subplots(figsize=(6, 6))
-    y = np.arange(len(r))
-    lo = np.exp(r["theta"] - 1.96 * r["se"]); hi = np.exp(r["theta"] + 1.96 * r["se"])
-    ax.errorbar(r["OR"], y, xerr=[r["OR"] - lo, hi - r["OR"]], fmt="o", color="#c0392b")
-    ax.axvline(1, ls="--", color="grey")
-    ax.set_yticks(y); ax.set_yticklabels(r["gene"])
-    ax.set_xlabel("OR for IBD per +1 SD senescence-gene expression")
-    ax.set_title("Cis-MR: senescence genes -> IBD (top 15)")
-    fig.tight_layout(); fig.savefig(f"{BASE}/outputs/mr/MR_forest_IBD.png", dpi=200)
-    print("\nsaved results/mr/MR_forest_IBD.png")
+
+def main() -> None:
+    cfg = Inputs()
+    inst = pd.read_csv(cfg.out_dir / "instruments_gut.tsv", sep="\t", dtype={"chrom": str})
+    if not len(inst):
+        raise RuntimeError("no GTEx gut instruments")
+    for outcome, name in OUTCOMES.items():
+        path = cfg.gwas_dir / name
+        if not path.exists():
+            raise FileNotFoundError(path)
+        run_outcome(outcome, path, inst, cfg.out_dir)
+
+
+if __name__ == "__main__":
+    main()

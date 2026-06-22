@@ -1,0 +1,40 @@
+gene	tissue	variant_id	rsid	chrom	pos	ref	alt	MR_OR	MR_p	MR_FDR	p_gwas	p_eqtl	CD_MR_OR	CD_MR_p	CD_MR_FDR	UC_MR_OR	UC_MR_p	UC_MR_FDR	analysis_status	coloc_PP3	coloc_PP4	coloc_method	blood_MR_OR	blood_MR_p	blood_MR_FDR	blood_coloc_PP4	blood_causal	blood_tested	causal_call	blood_compare
+SELE	Colon_Transverse	chr1_169112554_T_G_b38	rs77977611	1.0	169112554.0	T	G	0.8616366541971237	0.0018638479350299	0.0186384793502994	0.001842	1.32335e-05	0.8625040927029904	0.0164578191227303	0.14165922512297	0.8663561153461738	0.0180335321732122	0.1803353217321222	tested	0.0001380406138734	0.0326724379975337	significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+FCGR3B	Colon_Transverse	chr1_162354477_G_A_b38	rs4657186	1.0	162354477.0	G	A	0.8769231897000973	0.0121459963859026	0.0607299819295133	0.012	3.09615e-05	0.8625775900239697	0.028331845024594	0.14165922512297	0.8874727120670238	0.0712723395833473	0.3069496543186293	tested			significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+FCGR2A	Colon_Transverse	chr1_161499981_T_A_b38	rs116660017	1.0	161499981.0	T	A	1.153299961542217	0.0729255923806278	0.2430853079354263	0.07295	2.29299e-06	1.0905070720293892	0.3913659383075519	0.6522765638459199	1.1731984796874984	0.1196422248283142	0.3069496543186293	tested	0.0001414645576032	0.0355288364000297	significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+IL11	Colon_Transverse	chr19_55574821_C_T_b38	rs192034791	19.0	55574821.0	C	T	0.8765155305739079	0.1931724840364532	0.4829312100911331	0.1932	4.942e-06	0.8915971857372902	0.3804599259829788	0.6522765638459199	0.8589213589840692	0.2365668730825143	0.4186691868691469	tested	2.3066518543436534e-07	0.0002853531202791	significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+ADGRE2	Colon_Sigmoid	chr19_14641074_G_T_b38	rs117412371	19.0	14641074.0	G	T	0.957037223268732	0.4280510533986872	0.7956296965360582	0.4274	1.41235e-05	0.979408029391473	0.7666792852020369	0.9157121063798724	0.920988138206554	0.2512015121214881	0.4186691868691469	tested			significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+C5AR1	Colon_Sigmoid	chr19_47251208_G_A_b38	rs55804948	19.0	47251208.0	G	A	1.0373668008121426	0.4773778179216349	0.7956296965360582	0.478	1.66364e-08	0.9616244535474316	0.5550807488553304	0.7929724983647578	1.107277598998291	0.1227798617274517	0.3069496543186293	tested	0.0004967868262796	0.0096501653135828	significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+G0S2	Colon_Transverse	chr1_209696111_C_T_b38	rs74399656	1.0	209696111.0	C	T	0.9741292296616731	0.6397237295470606	0.8183795809199454	0.6384	4.91793e-06	0.9840444504055016	0.8241408957418851	0.9157121063798724	0.9747097025000684	0.7178419032723767	0.7178419032723767	tested	8.135969035708701e-05	0.0058481187638252	significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+S100A8	Colon_Transverse	chr1_153940057_A_G_b38	rs150059283	1.0	153940057.0	A	G	0.9777795219986956	0.7450023377431838	0.8183795809199454	0.7455	1.00589e-05	0.9934943863503016	0.9394156428967156	0.9394156428967156	0.9644690912987096	0.6879369788756148	0.7178419032723767	tested	1.164059617475039e-06	0.0003955700103735	significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+FPR1	Colon_Sigmoid	chr19_51751943_A_G_b38	rs4802859	19.0	51751943.0	A	G	0.9818599124446378	0.7653158812098244	0.8183795809199454	0.765	9.87285e-09	0.8980302840032782	0.176831705728901	0.4830294568005483	1.0574234485865166	0.4677220096006711	0.5846525120008389	tested	0.0001107383953325	0.0074321775536525	significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+FPR1	Colon_Transverse	chr19_51749765_A_G_b38	rs4802857	19.0	51749765.0	A	G	0.9871540577402748	0.8183795809199454	0.8183795809199454	0.8156	2.60177e-10	0.9089101886732184	0.1932117827202193	0.4830294568005483	1.0605703682018388	0.4068714465828308	0.5812449236897583	tested	8.269248652540605e-05	0.0070371007263307	significant_pairs_approx					False	False	False	gut_noncausal_blood_not_tested
+TNFRSF1A	Colon_Transverse	chr12_6333835_G_A_b38		12.0	6333835.0	G	A					1.22614e-05							no_gwas_harmonized				1.163271805657114	0.003624814385206	0.039872958237267	0.1801258091071557	False	True	False	neither
+AQP9	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+BCL2A1	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+CCL2	none																		no_gut_instrument				1.6150374638021068	0.0320274549326789	0.1413440916427286	0.0212093878334904	False	True	False	neither
+CCL8	none																		no_gut_instrument				2.3488402840391145	0.0023336386142975	0.0299483622168182	0.9551136484364796	True	True	False	blood_only
+CSF3R	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+CXCL10	none																		no_gut_instrument				0.8508403368862233	0.0167568423771355	0.0992520663876488	0.0471302095036168	False	True	False	neither
+CXCR2	none																		no_gut_instrument				0.7534160161745851	1.616843010154017e-09	1.2449691178185932e-07	0.9511953574318164	True	True	False	blood_only
+FAP	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+FFAR2	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+FPR2	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+IL13RA2	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+IL1B	none																		no_gut_instrument				0.5852481957675665	0.0051102606608558	0.0437211189873223	0.0706168856328926	False	True	False	neither
+IL24	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+MMP1	none																		no_gut_instrument				1.0290985873726577	0.8146938652942451	0.8961632518236697		False	True	False	neither
+MMP3	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+MNDA	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+OSM	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+OSMR	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+PROK2	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+PTGS2	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+S100A12	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+S100A9	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+SERPINE1	none																		no_gut_instrument				1.32382153581302	0.1043323155273475	0.2591480095356698		False	True	False	neither
+SRGN	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+TFPI2	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+TLR2	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+TNC	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
+TREM1	none																		no_gut_instrument								False	False	False	gut_noncausal_blood_not_tested
