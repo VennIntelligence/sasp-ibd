@@ -77,3 +77,5 @@
 - **2026-06-23 drug-target MR concordance完成**（`src/30`，`outputs/drugtarget_mr/`，`results/tables/drugtarget_mr_predictions.tsv` / `trial_outcomes.tsv` / `concordance_map.tsv`，`results/figures/Fig_drugtarget_concordance.png`）。结论：anti-TNF方向阳性对照对上但PP4未过严格阈值；CXCR2为唯一干净PP4通过的遗传预警，表达保护→拮抗/抑制预测碰壁；MMP9/IL1B/IL6等多为LD存疑或混合/失败现实；OSM/OSMR/TREM1/IL13RA2仍是marker/bystander而非可行动因果靶。
 
 - **2026-06-23 — 方向B2 派出**（会话 `cm7`，纯 CPU）：**CXCR2 保护悖论机制**。两步网络 MR：CXCR2 表达→中性粒/血细胞性状(Vuckovic2020/Astle2016)→IBD + 中介，解释"受体高反而保护"。补完 CXCR2 三件套（因果→抑制碰壁→机制）。等待中。
+
+- **2026-06-23 — CXCR2 mechanism B2 complete** (`src/31`, `outputs/cxcr2_mechanism/`). GWAS Catalog accessions confirmed for Vuckovic 2020 and Astle 2016 neutrophil traits; ran CXCR2 expression -> blood-cell trait MR, blood-cell trait -> de Lange IBD/CD/UC MR, approximate CXCR2-trait coloc, and network mediation read. See `outputs/cxcr2_mechanism/SUMMARY.md`.

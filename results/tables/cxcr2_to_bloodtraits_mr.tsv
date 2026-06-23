@@ -1,0 +1,13 @@
+trait	accession	context	exposure	outcome	method	nsnp	theta	se	p	OR	q	q_p	status
+Neutrophil count	GCST90002398	blood_eQTLGen	CXCR2_expression_blood_eQTLGen	neutrophil_count	IVW	1	0.052206735598962835	0.008107883453828962	1.2025596623808643e-10	1.0535935352904107	6.559002538102624e-31		ok
+Neutrophil count	GCST90002398	blood_eQTLGen	CXCR2_expression_blood_eQTLGen	neutrophil_count	weighted_median	1							need >=3 SNPs
+Neutrophil count	GCST90002398	neutrophil_BLUEPRINT	CXCR2_expression_neutrophil_BLUEPRINT	neutrophil_count	IVW	1	0.041341526584003384	0.0046664130455808675	8.046063686394126e-19	1.042207986504068	2.553646913746572e-30		ok
+Neutrophil count	GCST90002398	neutrophil_BLUEPRINT	CXCR2_expression_neutrophil_BLUEPRINT	neutrophil_count	weighted_median	1							need >=3 SNPs
+Neutrophil percentage of white cells	GCST90002399	blood_eQTLGen	CXCR2_expression_blood_eQTLGen	neutrophil_percent	IVW	1	0.030119191920847683	0.008151830365488822	0.00022008021744417567	1.0305773631287423	0.0		ok
+Neutrophil percentage of white cells	GCST90002399	blood_eQTLGen	CXCR2_expression_blood_eQTLGen	neutrophil_percent	weighted_median	1							need >=3 SNPs
+Neutrophil percentage of white cells	GCST90002399	neutrophil_BLUEPRINT	CXCR2_expression_neutrophil_BLUEPRINT	neutrophil_percent	IVW	1	0.02574468953984968	0.004691689180911359	4.08131807133112e-08	1.0260789463409818	0.0		ok
+Neutrophil percentage of white cells	GCST90002399	neutrophil_BLUEPRINT	CXCR2_expression_neutrophil_BLUEPRINT	neutrophil_percent	weighted_median	1							need >=3 SNPs
+White blood cell count	GCST90002407	blood_eQTLGen	CXCR2_expression_blood_eQTLGen	white_blood_cell_count	IVW	1	0.04762921619583889	0.008014500998131396	2.8005777501731843e-09	1.0487817119490832	6.712739887062981e-31		ok
+White blood cell count	GCST90002407	blood_eQTLGen	CXCR2_expression_blood_eQTLGen	white_blood_cell_count	weighted_median	1							need >=3 SNPs
+White blood cell count	GCST90002407	neutrophil_BLUEPRINT	CXCR2_expression_neutrophil_BLUEPRINT	white_blood_cell_count	IVW	1	0.0370854208712959	0.0046125722981294375	8.978451051265491e-16	1.037781665266123	0.0		ok
+White blood cell count	GCST90002407	neutrophil_BLUEPRINT	CXCR2_expression_neutrophil_BLUEPRINT	white_blood_cell_count	weighted_median	1							need >=3 SNPs
