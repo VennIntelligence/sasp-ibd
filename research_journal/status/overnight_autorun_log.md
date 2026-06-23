@@ -73,3 +73,5 @@
 
 - **2026-06-23 晚 — 方向B1 派出**（会话 `cm6`，纯 CPU）：**药靶 MR + 临床试验对账**。把 cis-MR 重框为"基因型模拟药物抑制"，预测各可成药靶(TNFRSF1A阳性对照/CXCR2/IL1B/MMP9/ICAM1/IL6/CCL2/OSM…)的抑制效果，对账真实 IBD 试验结局，出"遗传预测 vs 试验现实"一致性图。头条目标：遗传学解释 anti-TNF 为何有效、CXCR2 抑制为何碰壁。等待中。
 > 注：跨族裔复制经讨论降级为"顺手 robustness"，不作主攻（科学上只加复制不加维度，且 diversity 时尚退潮）。
+
+- **2026-06-23 drug-target MR concordance完成**（`src/30`，`outputs/drugtarget_mr/`，`results/tables/drugtarget_mr_predictions.tsv` / `trial_outcomes.tsv` / `concordance_map.tsv`，`results/figures/Fig_drugtarget_concordance.png`）。结论：anti-TNF方向阳性对照对上但PP4未过严格阈值；CXCR2为唯一干净PP4通过的遗传预警，表达保护→拮抗/抑制预测碰壁；MMP9/IL1B/IL6等多为LD存疑或混合/失败现实；OSM/OSMR/TREM1/IL13RA2仍是marker/bystander而非可行动因果靶。
