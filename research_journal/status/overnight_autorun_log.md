@@ -79,3 +79,6 @@
 - **2026-06-23 — 方向B2 派出**（会话 `cm7`，纯 CPU）：**CXCR2 保护悖论机制**。两步网络 MR：CXCR2 表达→中性粒/血细胞性状(Vuckovic2020/Astle2016)→IBD + 中介，解释"受体高反而保护"。补完 CXCR2 三件套（因果→抑制碰壁→机制）。等待中。
 
 - **2026-06-23 — CXCR2 mechanism B2 complete** (`src/31`, `outputs/cxcr2_mechanism/`). GWAS Catalog accessions confirmed for Vuckovic 2020 and Astle 2016 neutrophil traits; ran CXCR2 expression -> blood-cell trait MR, blood-cell trait -> de Lange IBD/CD/UC MR, approximate CXCR2-trait coloc, and network mediation read. See `outputs/cxcr2_mechanism/SUMMARY.md`.
+
+- **2026-06-23 ~10:25 JST — B2 完成 + 全弧收口。** CXCR2↑→中性粒计数↑(p1.2e-10,coloc0.998)；中性粒计数→IBD 风险(OR1.23/1.39/1.10)；中介乘积与保护**相反**→简单计数解释不了悖论，指向中性粒**定位/稳态**（与 B1 自洽：朴素抑制逻辑因此失败）。附带干净结果：**中性粒计数是 IBD 因果风险因子**。
+- **✅ 实验阶段结束，转写作。** 全部结论已整理进 **[`docs/FINDINGS_FOR_WRITEUP.md`](../docs/FINDINGS_FOR_WRITEUP.md)**（自包含写作交接文档，含精确数字+文件引用+诚实红线+建议结构）。其他智能体写论文读那一份即可。
