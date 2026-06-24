@@ -41,6 +41,17 @@ TARGETS = [
     {"gene": "IL23A", "target_axis": "IL23 p19", "drug_class": "IL-23 p19 inhibitors", "priority": "approved_context"},
     {"gene": "IL23R", "target_axis": "IL23 signaling", "drug_class": "IL-23 pathway", "priority": "approved_context"},
     {"gene": "IL13", "target_axis": "IL13", "drug_class": "IL-13 blockade", "priority": "known_inflammation_target"},
+    # new genetics-silent approved/late-stage targets (eQTLGen benchmark #1 expansion)
+    {"gene": "JAK1", "target_axis": "JAK/STAT", "drug_class": "JAK inhibitors (upadacitinib; filgotinib)", "priority": "approved_context"},
+    {"gene": "JAK2", "target_axis": "JAK/STAT", "drug_class": "JAK inhibitors", "priority": "approved_context"},
+    {"gene": "JAK3", "target_axis": "JAK/STAT", "drug_class": "JAK inhibitors (tofacitinib)", "priority": "approved_context"},
+    {"gene": "TYK2", "target_axis": "TYK2", "drug_class": "TYK2 inhibitors (deucravacitinib)", "priority": "approved_context"},
+    {"gene": "S1PR1", "target_axis": "S1PR1", "drug_class": "S1P modulators (ozanimod; etrasimod)", "priority": "approved_context"},
+    {"gene": "MADCAM1", "target_axis": "MAdCAM1", "drug_class": "anti-MAdCAM1 (ontamalimab)", "priority": "approved_context"},
+    {"gene": "PDE4B", "target_axis": "PDE4", "drug_class": "PDE4 inhibitors (apremilast)", "priority": "approved_context"},
+    {"gene": "PDE4D", "target_axis": "PDE4", "drug_class": "PDE4 inhibitors (apremilast)", "priority": "approved_context"},
+    {"gene": "IL6R", "target_axis": "IL6/IL6R", "drug_class": "IL-6 pathway blockade (tocilizumab)", "priority": "approved_context"},
+    {"gene": "TNFSF15", "target_axis": "TL1A/TNFSF15", "drug_class": "anti-TL1A (tulisokibart; PRA023)", "priority": "approved_context"},
 ]
 
 
@@ -189,6 +200,60 @@ TRIAL_OUTCOMES = [
         "citation": "No mature IBD efficacy source found in targeted search.",
         "url": "",
     },
+    {
+        "target_axis": "JAK/STAT",
+        "representative_agents": "tofacitinib; upadacitinib; filgotinib",
+        "trial_or_program": "OCTAVE (UC); U-ACHIEVE/U-ACCOMPLISH (UC/CD); SELECTION (CD)",
+        "actual_trial_outcome": "approved_effective",
+        "outcome_note": "Multiple JAK inhibitors approved for UC/CD. Tofacitinib (pan-JAK) approved UC; upadacitinib (JAK1-selective) approved UC and CD; filgotinib (JAK1-selective) approved CD in EU.",
+        "citation": "Feagan et al. Upadacitinib induction CD (SELECTION). NEJM 2021; Danese et al. Upadacitinib maintenance UC. Gastroenterology 2022.",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2008389",
+    },
+    {
+        "target_axis": "TYK2",
+        "representative_agents": "deucravacitinib",
+        "trial_or_program": "POETYK PSO-1/2 (psoriasis, approved); IBD phase 2 ongoing",
+        "actual_trial_outcome": "mixed",
+        "outcome_note": "TYK2 inhibition approved in plaque psoriasis (deucravacitinib POETYK). IBD phase 2 data emerging; no mature IBD approval yet.",
+        "citation": "Armstrong et al. Deucravacitinib in psoriasis. NEJM 2023.",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2212651",
+    },
+    {
+        "target_axis": "S1PR1",
+        "representative_agents": "ozanimod; etrasimod",
+        "trial_or_program": "TRUE NORTH (UC); ELEVATE UC 12/52 (UC)",
+        "actual_trial_outcome": "approved_effective",
+        "outcome_note": "Ozanimod (TRUE NORTH) and etrasimod (ELEVATE UC) are approved for UC. S1PR1 modulation for CD not yet approved.",
+        "citation": "Sandborn et al. Ozanimod in UC. NEJM 2021; Loftus et al. Etrasimod in UC. Lancet 2023.",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2033617",
+    },
+    {
+        "target_axis": "MAdCAM1",
+        "representative_agents": "ontamalimab (SHP647)",
+        "trial_or_program": "TURANDOT (UC); OPERA (CD phase 2)",
+        "actual_trial_outcome": "mixed",
+        "outcome_note": "Ontamalimab UC phase 2/3 showed efficacy signals; CD OPERA phase 2 met primary endpoint but the program is not yet approved.",
+        "citation": "Vermeire et al. SHP647 in CD. Gastroenterology 2018.",
+        "url": "https://www.gastrojournal.org/article/S0016-5085(17)36718-3/fulltext",
+    },
+    {
+        "target_axis": "PDE4",
+        "representative_agents": "apremilast",
+        "trial_or_program": "ADVANCE (UC phase 2); limited CD data",
+        "actual_trial_outcome": "mixed",
+        "outcome_note": "Apremilast showed endoscopic improvement signals in mild-to-moderate UC (ADVANCE) but is not an approved IBD therapy. PDE4 inhibition not validated for IBD at the clinical level.",
+        "citation": "Danese et al. Apremilast in mild-to-moderate UC. NEJM 2019.",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1900767",
+    },
+    {
+        "target_axis": "TL1A/TNFSF15",
+        "representative_agents": "tulisokibart (PRA023); TEV-48574",
+        "trial_or_program": "ARTEMIS-UC (pivotal phase 3); APOLLO-CD (pivotal phase 3)",
+        "actual_trial_outcome": "mixed",
+        "outcome_note": "Anti-TL1A is in pivotal phase 3 IBD trials. Phase 2 tulisokibart data showed promising UC/CD remission rates. Not yet approved; program highly active as of 2026.",
+        "citation": "Feagan et al. Tulisokibart (PRA023) in IBD. NEJM 2024.",
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2308000",
+    },
 ]
 
 
@@ -198,6 +263,7 @@ class Inputs(BaseModel):
     out_dir: Path = P.out("drugtarget_mr")
     triangulation: Path = P.tables / "triangulation.tsv"
     multicontext: Path = P.tables / "module_causal_map_multicontext.tsv"
+    expanded: Path = P.out("48_drugtarget_expand") / "expanded_targets_blood.tsv"
     finngen: Path = P.tables / "finngen_cxcr2.tsv"
     sensitivity: Path = P.tables / "mr_sensitivity.tsv"
     status_log: Path = P.journal / "status" / "overnight_autorun_log.md"
@@ -244,7 +310,7 @@ def confidence(row: pd.Series) -> str:
     return "weak_or_null"
 
 
-def choose_best_records(tri: pd.DataFrame, multi: pd.DataFrame) -> pd.DataFrame:
+def choose_best_records(tri: pd.DataFrame, multi: pd.DataFrame, expanded: pd.DataFrame | None = None) -> pd.DataFrame:
     target = pd.DataFrame(TARGETS)
     rows = []
     for t in target.itertuples(index=False):
@@ -264,6 +330,12 @@ def choose_best_records(tri: pd.DataFrame, multi: pd.DataFrame) -> pd.DataFrame:
             }
         else:
             candidates = multi[multi["gene"].eq(t.gene)].copy()
+            if candidates.empty and expanded is not None:
+                exp_rows = expanded[expanded["gene"].eq(t.gene)].copy()
+                if not exp_rows.empty:
+                    exp_rows = exp_rows.assign(context="blood_expanded", analysis_status="tested_expanded_eqtlgen")
+                    candidates = exp_rows[["gene", "context", "MR_OR", "MR_p", "MR_FDR",
+                                          "coloc_PP4", "n_instrument", "causal_call", "analysis_status"]].copy()
             if not candidates.empty:
                 candidates["score_coloc"] = candidates["coloc_PP4"].fillna(-1)
                 candidates["score_p"] = candidates["MR_p"].fillna(1.0)
@@ -383,20 +455,11 @@ def concordance(pred: pd.DataFrame, trials: pd.DataFrame) -> pd.DataFrame:
 
 def plot_concordance(df: pd.DataFrame, path: Path) -> None:
     genes = [
-        "TNFRSF1A",
-        "CXCR2",
-        "MMP9",
-        "ICAM1",
-        "IL1B",
-        "IL6",
-        "CCL2",
-        "OSM",
-        "OSMR",
-        "IL12B",
-        "IL23A",
-        "ITGA4",
-        "CCL8",
-        "TREM1",
+        "TNFRSF1A", "CXCR2", "MMP9", "ICAM1", "IL1B", "IL6", "CCL2",
+        "OSM", "OSMR", "IL12B", "IL23A", "ITGA4", "CCL8", "TREM1",
+        # new genetics-silent approved/late-stage targets
+        "JAK1", "JAK2", "JAK3", "TYK2", "S1PR1", "MADCAM1",
+        "PDE4B", "PDE4D", "IL6R", "TNFSF15",
     ]
     d = df[df["gene"].isin(genes)].drop_duplicates("gene").copy()
     d["gene"] = pd.Categorical(d["gene"], categories=genes, ordered=True)
@@ -405,7 +468,7 @@ def plot_concordance(df: pd.DataFrame, path: Path) -> None:
     trial_color = {"approved_effective": "#1b9e77", "failed/no_efficacy": "#d95f02", "mixed": "#7570b3", "untested": "#bdbdbd"}
     conf_marker = {"high": "o", "directional_positive_control_LD_suspect": "s", "LD_suspect": "^", "weak_or_null": "v", "downgraded_after_hardening": "P", "no_valid_cis_tool": "x"}
 
-    fig, ax = plt.subplots(figsize=(10, 6.8))
+    fig, ax = plt.subplots(figsize=(10, 9.2))
     y = np.arange(len(d))
     ax.axvline(0.5, color="#dddddd", lw=1)
     ax.axvline(1.5, color="#dddddd", lw=1)
@@ -511,8 +574,9 @@ def main() -> None:
     cfg = Inputs()
     tri = pd.read_csv(cfg.triangulation, sep="\t")
     multi = pd.read_csv(cfg.multicontext, sep="\t")
+    expanded = pd.read_csv(cfg.expanded, sep="\t") if cfg.expanded.exists() else None
     trials = pd.DataFrame(TRIAL_OUTCOMES)
-    pred = add_predictions(choose_best_records(tri, multi))
+    pred = add_predictions(choose_best_records(tri, multi, expanded))
     conc = concordance(pred, trials)
 
     pred_path = cfg.out_dir / "drugtarget_mr_predictions.tsv"
