@@ -82,3 +82,29 @@
 
 - **2026-06-23 ~10:25 JST — B2 完成 + 全弧收口。** CXCR2↑→中性粒计数↑(p1.2e-10,coloc0.998)；中性粒计数→IBD 风险(OR1.23/1.39/1.10)；中介乘积与保护**相反**→简单计数解释不了悖论，指向中性粒**定位/稳态**（与 B1 自洽：朴素抑制逻辑因此失败）。附带干净结果：**中性粒计数是 IBD 因果风险因子**。
 - **✅ 实验阶段结束，转写作。** 全部结论已整理进 **[`docs/FINDINGS_FOR_WRITEUP.md`](../docs/FINDINGS_FOR_WRITEUP.md)**（自包含写作交接文档，含精确数字+文件引用+诚实红线+建议结构）。其他智能体写论文读那一份即可。
+
+---
+
+## 2026-06-24 — 扩充分析三项（triage upgrade）
+
+**背景**：reviewer 指出"可升级为系统化 triage"，做了三项补充分析：
+
+### #1 药靶扩展基准测试（本地，`src/48`）
+- 新测 10 个获批/晚期临床靶点（JAK1/2/3、TYK2、S1PR1、MAdCAM1、PDE4B/D、IL6R、TNFSF15），血液 eQTLGen cis-MR + coloc。
+- **结论**：全部 coloc PP4≈0；JAK2 有强 MR（OR 0.665，F=638，p≈0）但 coloc=0 → LD 存疑，不是遗传背书。TNFSF15（TL1A）在 eQTLGen 中完全缺失（genetics-silent）。
+- 现 `drugtarget_evidence_tiers.tsv` 含 **27 个靶**：1 strict actionable（CXCR2 轴）+ 1 directional control（TNFRSF1A）+ **14 genetics-silent approved**（新增 9 + 原有 5）+ 6 LD-suspect + 3 marker/bystander + 1 tested-null + 2 unrateable。
+- 脚本：`src/48_drugtarget_benchmark_expand.py`；结果：`outputs/48_drugtarget_expand/expanded_targets_blood.tsv`；`src/30` + `src/44` 已联动重跑并促推至 `results/tables/`。
+
+### #3 PheWAS 安全性地图（本地，`src/49`）
+- FinnGen R12 两个 lead 变异（血液 rs62183956 + 中性粒 rs6737563）phenome-wide 扫描（2470 个疾病终点，Bonferroni = 0.05/2470 = 2.02e-5）。
+- **结论**：两变异各 **6 个 Bonferroni 显著终点**，完全一致：IBD/UC 保护（4 个，符合预期）+ **胆结石/胆囊切除（2 个，risk 方向，最强信号 p=5e-10）**。无感染/呼吸道/血免疫疾病终点显著 → locus 多效性窄。胆石症信号生物学合理（CXCL8 在胆道上皮高表达，中性粒-胆道炎症是胆石症机制）。
+- 脚本：`src/49_phewas_axis.py`；图：`results/figures/Fig_phewas_blood_lead_rs62183956.png`；表：`results/tables/phewas_axis_significant.tsv`。
+
+### #4 单细胞机制定位（**远端 `ujs@100.108.238.8`，CPU only**，`src/51`）
+- SCP259 Smillie UC atlas Imm compartment（210,614 个细胞），健康状态（Healthy/Non-inflamed/Inflamed）。基因：CXCR1、CXCR2、IL8（=CXCL8）、CXCL1、CXCL5。
+- **结论**：CXCL8/IL8 由**髓系细胞**产生（炎症单核 30%、巡回单核 42%、巨噬 29%、DC2 33%）；CXCR1/CXCR2 受体在所有捕获免疫细胞中接近零（中性粒在 scRNA-seq 中缺失，符合预期）。CXCL8 产生**组成性**（Healthy/Non-inflamed/Inflamed 三态幅度相近）→ 稳态黏膜免疫监控角色，非纯炎症应激。
+- 脚本：`src/51_scrnaseq_cxcr2_mechanism.py`（已推至远端并运行）；结果拉回本地并促推：`results/figures/Fig6_scrnaseq_cxcl8.png`（主图）、`results/figures/FigS8_cxcl8_health.png`（健康态条形）、`results/tables/scrnaseq_cxcl8_dotplot_stats.tsv`。
+
+**FINDINGS_FOR_WRITEUP.md 已同步更新**（Sec 3b PheWAS、Sec 3 扩展分层、Sec 4 单细胞机制小节）。
+
+**当前状态：三项补充分析全部完成，远端无待运行任务，可转写作。**
